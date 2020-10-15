@@ -836,7 +836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138179508}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 91.20601, y: 105.69138, z: -6128.5366}
+  m_LocalPosition: {x: 91.20601, y: 73, z: -6128.5366}
   m_LocalScale: {x: 67.92043, y: 67.92043, z: 67.92043}
   m_Children:
   - {fileID: 255675998}
@@ -922,7 +922,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1299178987
 RectTransform:

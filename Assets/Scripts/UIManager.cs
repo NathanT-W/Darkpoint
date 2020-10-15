@@ -38,9 +38,10 @@ public class UIManager : MonoBehaviour
         mainMenuUI.SetActive(true);
     }
 
-    public void loadLevelByIndex(int level)
+    public void loadByIndex(int sceneIndex)
     {
-        SceneManager.LoadScene(level);
+        
+        SceneManager.LoadScene(sceneIndex); // choose which number level
     }
 
 }
