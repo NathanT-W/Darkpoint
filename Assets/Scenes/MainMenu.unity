@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 97047883}
   - component: {fileID: 97047882}
   - component: {fileID: 97047881}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: exitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 255676001}
   - component: {fileID: 255676000}
   - component: {fileID: 255675999}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: playButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 381829329}
   - component: {fileID: 381829328}
   - component: {fileID: 381829327}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: backButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,7 +611,7 @@ GameObject:
   - component: {fileID: 565081862}
   - component: {fileID: 565081861}
   - component: {fileID: 565081860}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: settingsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -821,7 +821,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1138179509}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: mainMenuUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1024,7 +1024,7 @@ GameObject:
   - component: {fileID: 1749665622}
   - component: {fileID: 1749665621}
   - component: {fileID: 1749665620}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: backButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1152,7 +1152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1863632450}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: levelSelectUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1229,7 +1229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2064323965}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: settingsUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1261,7 +1261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2097292231}
   - component: {fileID: 2097292230}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1307,7 +1307,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 9218411304006871945, guid: 46dbfb518aa3a2542ab5f6a74eb8dba3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
