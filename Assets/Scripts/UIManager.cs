@@ -1,22 +1,46 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class UIManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-    // Update is called once per frame
-    void Update()
+    public GameObject mainMenuUI, settingsUI, levelSelectUI;
+    AudioMixer mixer;
+        
+    public void SetLevel (float slidervalue)
     {
-     
+        mixer.SetFloat("MusicVol", Mathf.Log10(slidervalue) * 20);
     }
 
-    void exitButton()
+    public void exitButton()
     {
         Application.Quit();
     }
+
+    public void startButton()
+    {
+        levelSelectUI.SetActive(true);
+        mainMenuUI.SetActive(false);
+    }
+
+    public void settingsButton()
+    {
+        settingsUI.SetActive(true);
+        mainMenuUI.SetActive(false);
+    }
+
+    public void backButton(GameObject currentUI)
+    {
+        currentUI.SetActive(false);
+        mainMenuUI.SetActive(true);
+    }
+
+    public void loadLevelByIndex(int level)
+    {
+        SceneManager.LoadScene(level);
+    }
+
 }
