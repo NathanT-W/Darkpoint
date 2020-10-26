@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class Player_Movement : MonoBehaviour
+public class Player_Movement : NetworkBehaviour
 {
     public int playerSpeed = 20;
     public int playerJumpPower = 2000;
@@ -12,8 +13,17 @@ public class Player_Movement : MonoBehaviour
 
     public float moveX;
 
+    void Start()
+    {
+        if(this.isLocalPlayer)
+        {
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>().playerTransform=transform;
+        }
+    }
+
     void Update()
     {
+        if(this.isLocalPlayer)
         PlayerMove();
     }
 
@@ -54,10 +64,10 @@ public class Player_Movement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Player has collided with" + collision.collider.name);
         if( collision.gameObject.tag == "Ground") 
         {
             canJump = true;
         }
     }
+
 }
