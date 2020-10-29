@@ -1,3 +1,4 @@
-Key,Description,Standard,GER,RUS
-WRITE.Flowchart.13,,Music,Musik,??????
-WRITE.Flowchart.14,,Sound,Klang,????
+Key,Description,Standard,DE
+SETTEXT.Flowchart.13,,Music,Musikoptionen
+SETTEXT.Flowchart.14,,Sound,Klang
+SETTEXT._CommandCopyBuffer.13,,,
