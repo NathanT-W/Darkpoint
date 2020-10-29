@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 96038773}
   - component: {fileID: 96038772}
   m_Layer: 5
-  m_Name: soundVolumeText
+  m_Name: SoundVolume text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -996,7 +996,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1124,7 +1124,7 @@ GameObject:
   - component: {fileID: 930784137}
   - component: {fileID: 930784138}
   m_Layer: 5
-  m_Name: musicVolumeSlider
+  m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1213,7 +1213,7 @@ GameObject:
   - component: {fileID: 935604306}
   - component: {fileID: 935604307}
   m_Layer: 5
-  m_Name: soundVolumeSlider
+  m_Name: sound volume slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1308,12 +1308,13 @@ GameObject:
   - component: {fileID: 1017410000}
   - component: {fileID: 1017409999}
   - component: {fileID: 1017410003}
+  - component: {fileID: 1017410005}
   - component: {fileID: 1017410006}
+  - component: {fileID: 1017410007}
   - component: {fileID: 1017410008}
   - component: {fileID: 1017410004}
   - component: {fileID: 1017410009}
   - component: {fileID: 1017410010}
-  - component: {fileID: 1017410005}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1346,9 +1347,10 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1017409997}
+  - {fileID: 1017410001}
   selectedCommands: []
-  variables: []
+  variables:
+  - {fileID: 1017410005}
   description: This flowchart controls the main menu music
   stepPause: 0
   colorCommands: 1
@@ -1390,7 +1392,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 122
     y: -220
-    width: 110
+    width: 110.8
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1399,8 +1401,8 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1017409996}
   commandList:
-  - {fileID: 1017410005}
   - {fileID: 1017410002}
+  - {fileID: 1017410007}
   - {fileID: 1017410008}
   - {fileID: 1017410004}
   - {fileID: 1017410009}
@@ -1467,7 +1469,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 157
     y: -107
-    width: 110
+    width: 111.6
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1553,14 +1555,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1017409994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4015e84616cc45cfb498561373899d2, type: 3}
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 12
-  indentLevel: 0
-  volume: 0.5
-  fadeDuration: 1
-  waitUntilFinished: 1
+  scope: 1
+  key: Vol
+  value: 100
 --- !u!114 &1017410006
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1582,6 +1582,27 @@ MonoBehaviour:
   interactableState:
     booleanRef: {fileID: 0}
     booleanVal: 1
+--- !u!114 &1017410007
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017409994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab0d0ed4a2ca94c81a230a0ecce6e6e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  targetObjects:
+  - {fileID: 255675997}
+  - {fileID: 565081858}
+  - {fileID: 97047879}
+  interactableState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
 --- !u!114 &1017410008
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1722,8 +1743,8 @@ RectTransform:
   m_Father: {fileID: 200372779}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 50, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1780,7 +1801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1138179509
 Transform:
   m_ObjectHideFlags: 0
@@ -1932,8 +1953,8 @@ RectTransform:
   m_Father: {fileID: 619858190}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 50, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2128,7 +2149,7 @@ GameObject:
   - component: {fileID: 1701448766}
   - component: {fileID: 1701448765}
   m_Layer: 5
-  m_Name: musicVolumeText
+  m_Name: MusicVolume text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2390,7 +2411,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2537,7 +2558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2064323965
 Transform:
   m_ObjectHideFlags: 0
