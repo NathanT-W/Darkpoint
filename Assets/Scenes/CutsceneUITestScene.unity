@@ -298,9 +298,10 @@ GameObject:
   - component: {fileID: 1053004784}
   - component: {fileID: 1053004786}
   - component: {fileID: 1053004785}
-  - component: {fileID: 1053004790}
   - component: {fileID: 1053004788}
   - component: {fileID: 1053004789}
+  - component: {fileID: 1053004790}
+  - component: {fileID: 1053004791}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -333,7 +334,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1053004788}
+  - {fileID: 1053004786}
   selectedCommands: []
   variables: []
   description: 
@@ -376,7 +377,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 67
-    y: 70
+    y: 68
     width: 77
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -387,6 +388,7 @@ MonoBehaviour:
   eventHandler: {fileID: 1053004785}
   commandList:
   - {fileID: 1053004790}
+  - {fileID: 1053004791}
   suppressAllAutoSelections: 0
 --- !u!4 &1053004787
 Transform:
@@ -452,15 +454,53 @@ MonoBehaviour:
   m_GameObject: {fileID: 1053004783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 1
+  itemId: 3
   indentLevel: 0
-  musicClip: {fileID: 0}
-  atTime: 0
-  loop: 1
-  fadeDuration: 1
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: Hey there
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &1053004791
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053004783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  storyText: Awoo
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &1833379553
 GameObject:
   m_ObjectHideFlags: 1
