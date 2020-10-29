@@ -996,7 +996,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1313,7 +1313,10 @@ GameObject:
   - component: {fileID: 1017410004}
   - component: {fileID: 1017410009}
   - component: {fileID: 1017410010}
+<<<<<<< HEAD
   - component: {fileID: 1017410005}
+=======
+>>>>>>> parent of 9e40938... Basic localization to german (can't translate back for now)
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1346,7 +1349,11 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
+<<<<<<< HEAD
   - {fileID: 1017409997}
+=======
+  - {fileID: 1017410001}
+>>>>>>> parent of 9e40938... Basic localization to german (can't translate back for now)
   selectedCommands: []
   variables: []
   description: This flowchart controls the main menu music
@@ -1722,8 +1729,8 @@ RectTransform:
   m_Father: {fileID: 200372779}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 50, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1780,7 +1787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1138179509
 Transform:
   m_ObjectHideFlags: 0
@@ -1932,8 +1939,8 @@ RectTransform:
   m_Father: {fileID: 619858190}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 50, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2390,7 +2397,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2537,7 +2544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2064323965
 Transform:
   m_ObjectHideFlags: 0
