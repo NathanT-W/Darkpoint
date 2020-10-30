@@ -1,15 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class CameraFollow : MonoBehaviour
 {
 	public Transform playerTransform;
+	public PhotonView photonView;
 
    void Start()
    {
-		  playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-   }
+		GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+		foreach(GameObject player in players)
+        {
+            {
+				this.playerTransform = player.transform;
+				break;
+            }
+        }
+	}
 
    void Update()
    {
