@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
+using TMPro;
 
 public class PhotonHandler: MonoBehaviourPunCallbacks
 {
@@ -13,6 +14,12 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
     public PhotonButtons Buttons;
 
     public GameObject mainPlayer;
+
+    public GameObject photonScripts;
+
+    public Text roomName, player2Name;
+
+    private string RoomName, PlayerName;
 
     private void Awake()
     {
@@ -25,24 +32,52 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
 
     public void CreateRoom()
     {
-        PhotonNetwork.CreateRoom(Buttons.createRoomInput.text, new RoomOptions() { MaxPlayers = 2 }, null);
+        PlayerName = PhotonNetwork.NickName;
+        RoomName = Buttons.createRoomInput.text;
+        PhotonNetwork.CreateRoom(RoomName, new RoomOptions() { MaxPlayers = 2 }, null);
     }
 
     public void JoinOrCreateRoom()
     {
+        PlayerName = PhotonNetwork.NickName;
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 2;
-        PhotonNetwork.JoinOrCreateRoom(Buttons.joinRoomInput.text, roomOptions, TypedLobby.Default);
+        RoomName = Buttons.joinRoomInput.text;
+        PhotonNetwork.JoinOrCreateRoom(RoomName, roomOptions, TypedLobby.Default);
     }
 
     public override void OnJoinedRoom()
     {
-        MoveScene();
-        Debug.Log("Connected to the room");
-        
+        Player[] playerList = PhotonNetwork.PlayerList;
+
+        foreach (Player p in playerList)
+        {
+            if (!p.NickName.Equals(PhotonNetwork.NickName))
+            {
+                player2Name.text = p.NickName;
+            }
+        }
+        photonScripts.GetComponent<PhotonConnect>().OnConnectedToRoom();
+        roomName.text = RoomName;
+        Debug.Log("Connected to the room: " + RoomName);
+
     }
 
-     void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        base.OnPlayerEnteredRoom(newPlayer);
+
+        player2Name.text = newPlayer.NickName;
+    }
+
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        base.OnPlayerLeftRoom(otherPlayer);
+
+        player2Name.text = "";
+    }
+
+    void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
     {
         if(scene.name == "Level1")
         {

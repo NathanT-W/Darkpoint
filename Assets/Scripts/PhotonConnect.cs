@@ -6,7 +6,7 @@ using Photon.Realtime;
 
 public class PhotonConnect : MonoBehaviourPunCallbacks
 {
-    public GameObject section1, section2, section3;
+    public GameObject section1, section2, section3, section4;
 
     private void Awake()
     {
@@ -40,10 +40,22 @@ public class PhotonConnect : MonoBehaviourPunCallbacks
         {
             section2.SetActive(false);
         }
+        if (section4.activeSelf)
+        {
+            section4.SetActive(false);
+        }
 
         section3.SetActive(true);
 
         Debug.Log("Disconnected from Photon Services"); 
+    }
+
+
+    public void OnConnectedToRoom()
+    {
+        section2.SetActive(false);
+        section4.SetActive(true);
+        Debug.Log("Joined Room");
     }
 
 }
