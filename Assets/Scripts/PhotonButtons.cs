@@ -19,6 +19,20 @@ public class PhotonButtons : MonoBehaviourPunCallbacks
     public void onClickJoinRoom()
     {
         Handler.JoinOrCreateRoom();
-    } 
+    }
 
+    public void onClickDisconnect()
+    {
+        Handler.disconnect();
+    }
+
+    public void onClickReadyUp()
+    {
+        Handler.changeReadyUp();
+    }
+
+    public void onClickUnReadyUp()
+    {
+        Handler.changeReadyUp();
+    }
 }

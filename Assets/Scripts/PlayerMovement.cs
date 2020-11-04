@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
             Camera.main.GetComponent<CameraFollow>().playerTransform = transform;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!devTesting)
         {

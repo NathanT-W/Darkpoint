@@ -13,13 +13,13 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
 
     public PhotonButtons Buttons;
 
-    public GameObject mainPlayer;
-
-    public GameObject photonScripts;
+    public GameObject mainPlayer, photonScripts, readyUpButton, unReadyUpButton;
 
     public Text roomName, player2Name;
 
     private string RoomName, PlayerName;
+
+    private int noOfReadyPlayers;
 
     private void Awake()
     {
@@ -55,6 +55,7 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
             if (!p.NickName.Equals(PhotonNetwork.NickName))
             {
                 player2Name.text = p.NickName;
+                readyUpButton.SetActive(true);
             }
         }
         photonScripts.GetComponent<PhotonConnect>().OnConnectedToRoom();
@@ -63,9 +64,51 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
 
     }
 
+    public void disconnect()
+    {
+        PhotonNetwork.LeaveRoom();
+        Debug.Log("Disconnected from the room: " + RoomName);
+    }
+    [PunRPC]
+    public void readyUp()
+    {
+        noOfReadyPlayers += 1;
+
+        if(noOfReadyPlayers == 2)
+        {
+            MoveScene();
+        }
+    }
+
+    [PunRPC]
+    public void unReadyUp()
+    {
+        noOfReadyPlayers -= 1;
+    }
+
+    public void changeReadyUp()
+    {
+
+        if (readyUpButton.activeSelf)
+        {
+            readyUpButton.SetActive(false);
+            unReadyUpButton.SetActive(true);
+            photonView.RPC("readyUp", RpcTarget.All);
+        }
+        else
+        {
+            readyUpButton.SetActive(true);
+            unReadyUpButton.SetActive(false);
+            photonView.RPC("unReadyUp", RpcTarget.All);
+        }
+
+    }
+
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         base.OnPlayerEnteredRoom(newPlayer);
+
+        readyUpButton.SetActive(true);
 
         player2Name.text = newPlayer.NickName;
     }
@@ -73,6 +116,10 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
         base.OnPlayerLeftRoom(otherPlayer);
+
+        readyUpButton.SetActive(false);
+
+        noOfReadyPlayers -= 1;
 
         player2Name.text = "";
     }
@@ -89,7 +136,6 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
     {
         PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0); 
     }
-
     public void MoveScene()
     {
         Buttons = null;

@@ -38,6 +38,9 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - RespawnSpaceship
+  - readyUp
+  - unReadyUp
+  - MoveScene
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0

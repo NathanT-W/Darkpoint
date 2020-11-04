@@ -27,6 +27,7 @@ public class PhotonConnect : MonoBehaviourPunCallbacks
     {
         section1.SetActive(false);
         section2.SetActive(true);
+        section4.SetActive(false);
         Debug.Log("Joined Lobby");
     }
 
@@ -50,12 +51,10 @@ public class PhotonConnect : MonoBehaviourPunCallbacks
         Debug.Log("Disconnected from Photon Services"); 
     }
 
-
     public void OnConnectedToRoom()
     {
         section2.SetActive(false);
         section4.SetActive(true);
-        Debug.Log("Joined Room");
     }
 
 }
