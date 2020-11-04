@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void SmoothNetMovement()
     {
-        transform.position = Vector3.Lerp(transform.position, selfPosition, Time.deltaTime * 8);
+        transform.position = Vector3.Lerp(transform.position, selfPosition, Time.deltaTime * 10);
     }
 
     private void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
