@@ -39,12 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Environment
+    uniqueID: 3323394013
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Top
-    uniqueID: 3428579793
-    locked: 0
   - name: Player
     uniqueID: 2274235863
+    locked: 0
+  - name: UI
+    uniqueID: 3428579793
     locked: 0
