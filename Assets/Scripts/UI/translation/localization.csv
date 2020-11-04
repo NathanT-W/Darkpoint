@@ -1,4 +1,15 @@
-Key,Description,Standard,DE
-SETTEXT.Flowchart.13,,Music,Musikoptionen
-SETTEXT.Flowchart.14,,Sound,Klang
-SETTEXT._CommandCopyBuffer.13,,,
+Key,Description,Standard,DEU
+SETTEXT.Flowchart.16,,Music,Musikoptionen
+SETTEXT.Flowchart.17,,Sound,Klang
+SETTEXT.Flowchart.18,,German,Deutsche
+SETTEXT.Flowchart.19,,Back,Zuruck
+SETTEXT.Flowchart.20,,play,spielen
+SETTEXT.Flowchart.21,,settings,optionen
+SETTEXT.Flowchart.22,,exit,beenden
+SETTEXT.Flowchart.24,,Connecting...,Verbindung…
+SETTEXT.Flowchart.27,,Join Room,Raum betreten
+SETTEXT.Flowchart.28,,Join,Beitreten
+SETTEXT.Flowchart.33,,Create,Erstellen
+SETTEXT.Flowchart.30,,Player Name,Spielername
+SETTEXT.Flowchart.31,,Create Room,Platz schaffen
+SETTEXT.Flowchart.32,,Disconnected,Getrennt
