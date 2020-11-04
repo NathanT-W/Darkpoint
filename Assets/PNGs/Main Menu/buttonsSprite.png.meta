@@ -7,13 +7,13 @@ TextureImporter:
     second: logo
   - first:
       213: -1390775019235724127
-    second: hoverButton
+    second: Normal
   - first:
       213: -6897695903764616880
-    second: defaultButton
+    second: Pressed
   - first:
       213: -5725535315245942256
-    second: pressedButton
+    second: Highlighted
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,7 +109,7 @@ TextureImporter:
         width: 705
         height: 136
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -122,7 +122,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hoverButton
+      name: Normal
       rect:
         serializedVersion: 2
         x: 21
@@ -130,7 +130,7 @@ TextureImporter:
         width: 247
         height: 81
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -143,7 +143,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: defaultButton
+      name: Pressed
       rect:
         serializedVersion: 2
         x: 628
@@ -151,7 +151,7 @@ TextureImporter:
         width: 246
         height: 83
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -164,7 +164,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pressedButton
+      name: Highlighted
       rect:
         serializedVersion: 2
         x: 327
@@ -172,7 +172,7 @@ TextureImporter:
         width: 244
         height: 81
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
