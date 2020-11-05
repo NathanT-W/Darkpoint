@@ -6,6 +6,7 @@ using Photon.Realtime;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public PhotonView photonView;
     public Animator animator;
 
     public int playerSpeed = 20;
@@ -16,13 +17,13 @@ public class PlayerMovement : MonoBehaviour
 
     public float moveX;
 
-    public PhotonView photonView;
-
     private Vector3 selfPosition;
 
     public bool devTesting = false;
 
-    public string name = "player1"; 
+    public string name = "player1";
+
+    private float selfSpeed;
 
     void Start()
     {
@@ -91,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
     private void SmoothNetMovement()
     {
         transform.position = Vector3.Lerp(transform.position, selfPosition, Time.deltaTime * 10);
+        animator.SetFloat("Speed", Mathf.Abs(moveX));
     }
 
     private void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -98,10 +100,12 @@ public class PlayerMovement : MonoBehaviour
         if(stream.IsWriting)
         {
             stream.SendNext(transform.position);
+            stream.SendNext(animator.GetFloat("Speed"));
         }
         else
         {
             selfPosition = (Vector3)stream.ReceiveNext();
+            selfSpeed = (float)stream.ReceiveNext();
         }
     }
 }
