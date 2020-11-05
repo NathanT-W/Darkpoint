@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &1941550615070843640
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146991619563262073}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1383467026114841825
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,6 +35,7 @@ GameObject:
   - component: {fileID: 3615811751735058965}
   - component: {fileID: -4716537173438165175}
   - component: {fileID: 807722645309766138}
+  - component: {fileID: -4852346770260506724}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -103,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce9dd8b9ac195b49abff6f0c8ebd72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: -4852346770260506724}
   playerSpeed: 20
   playerJumpPower: 2000
   facingLeft: 0
@@ -192,6 +213,25 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 0
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!95 &-4852346770260506724
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383467026114841825}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 839be0b16b007b641a78b323d79dc86a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5557332940813354181
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +452,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8114265136520190287, guid: d5b99ae754ceb1c44b6e27399590e638, type: 3}
+    - {fileID: 8114265136520190321, guid: d5b99ae754ceb1c44b6e27399590e638, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d5b99ae754ceb1c44b6e27399590e638, type: 3}
+--- !u!1 &146991619563262073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6715133371303368830, guid: d5b99ae754ceb1c44b6e27399590e638, type: 3}
+  m_PrefabInstance: {fileID: 6862019222834219015}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2238283827303249215 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4626658516449819960, guid: d5b99ae754ceb1c44b6e27399590e638, type: 3}

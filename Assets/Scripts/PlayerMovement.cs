@@ -6,6 +6,8 @@ using Photon.Realtime;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator animator;
+
     public int playerSpeed = 20;
     public int playerJumpPower = 2000;
 
@@ -24,11 +26,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        photonView = (PhotonView)gameObject.GetComponent<PhotonView>();
         if (photonView.IsMine)
             Camera.main.GetComponent<CameraFollow>().playerTransform = transform;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (!devTesting)
         {
@@ -43,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
     void PlayerMove()
     {
         moveX = Input.GetAxis("Horizontal");
+
+        animator.SetFloat("Speed", Mathf.Abs(moveX));
 
         if(Input.GetButtonDown("Jump") && canJump == true)
         {
