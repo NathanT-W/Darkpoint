@@ -13,7 +13,7 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
 
     public PhotonButtons Buttons;
 
-    public GameObject mainPlayer, photonScripts, readyUpButton, unReadyUpButton;
+    public GameObject mainPlayer, clientPlayer, photonScripts, readyUpButton, unReadyUpButton;
 
     public Text roomName, player2Name;
 
@@ -134,7 +134,10 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
 
     public void SpawnPlayer()
     {
+        if(PhotonNetwork.IsMasterClient)
         PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0); 
+        else
+        PhotonNetwork.Instantiate(clientPlayer.name, clientPlayer.transform.position, clientPlayer.transform.rotation, 0);
     }
     public void MoveScene()
     {

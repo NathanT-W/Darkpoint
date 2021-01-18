@@ -1074,6 +1074,7 @@ MonoBehaviour:
   joinRoomInput: {fileID: 1127576648}
   Buttons: {fileID: 1984771933}
   mainPlayer: {fileID: 1383467026114841825, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
+  clientPlayer: {fileID: 7639990491096809667, guid: 709cde0e5e450f243a300b9b208c04ad, type: 3}
   photonScripts: {fileID: 1984771932}
   readyUpButton: {fileID: 1594658516}
   unReadyUpButton: {fileID: 391549633}
