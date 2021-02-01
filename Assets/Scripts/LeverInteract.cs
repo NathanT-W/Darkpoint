@@ -6,6 +6,8 @@ public class LeverInteract : MonoBehaviour
 {
 
     public GameObject activatedSwitch;
+    public GameObject cageDoorClosed;
+    public GameObject cageDoorOpen;
 
     bool interactable = false;
 
@@ -28,6 +30,8 @@ public class LeverInteract : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 activatedSwitch.SetActive(true);
+                cageDoorClosed.SetActive(false);
+                cageDoorOpen.SetActive(true);
             }
         }
     }
