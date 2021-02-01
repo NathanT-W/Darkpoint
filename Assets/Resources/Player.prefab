@@ -126,7 +126,7 @@ MonoBehaviour:
   photonView: {fileID: -5960982828714317779}
   animator: {fileID: 1941550615070843640}
   playerSpeed: 20
-  playerJumpPower: 2000
+  playerJumpPower: 4000
   facingLeft: 0
   canJump: 0
   moveX: 0

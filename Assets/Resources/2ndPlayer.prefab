@@ -492,13 +492,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5802846329007660476}
-  - component: {fileID: 2667079295744863405}
+  - component: {fileID: -1338913982267701146}
   - component: {fileID: -2307829976572223092}
+  - component: {fileID: 2667079295744863405}
   - component: {fileID: -4140352252112929613}
   - component: {fileID: 6833648697555041125}
   - component: {fileID: -8707119903597981469}
   - component: {fileID: 5709660816024241695}
-  - component: {fileID: -1338913982267701146}
   - component: {fileID: 6736783163315563411}
   m_Layer: 0
   m_Name: 2ndPlayer
@@ -526,26 +526,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2667079295744863405
-MonoBehaviour:
+--- !u!50 &-1338913982267701146
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7639990491096809667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fd8f4523e60aba48bf488aff13167b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  photonView: {fileID: -4140352252112929613}
-  animator: {fileID: 5709660816024241695}
-  flyingSpeed: 20
-  facingLeft: 0
-  moveX: 0
-  moveY: 0
-  devTesting: 0
-  name: player2
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &-2307829976572223092
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -572,6 +573,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2667079295744863405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7639990491096809667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd8f4523e60aba48bf488aff13167b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  photonView: {fileID: -4140352252112929613}
+  animator: {fileID: 5709660816024241695}
+  flyingSpeed: 20
+  facingLeft: 0
+  moveX: 0
+  moveY: 0
+  devTesting: 0
+  name: player2
 --- !u!114 &-4140352252112929613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,7 +677,7 @@ Animator:
   m_GameObject: {fileID: 7639990491096809667}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb7abd3e073782c4e97033f4136fad30, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -665,27 +686,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!50 &-1338913982267701146
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7639990491096809667}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &6736783163315563411
 MonoBehaviour:
   m_ObjectHideFlags: 0

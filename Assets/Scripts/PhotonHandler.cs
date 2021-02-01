@@ -14,6 +14,7 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
     public PhotonButtons Buttons;
 
     public GameObject mainPlayer, clientPlayer, photonScripts, readyUpButton, unReadyUpButton;
+    public GameObject VanSpawnPoint, AvaSpawnPoint;
 
     public Text roomName, player2Name;
 
@@ -128,16 +129,18 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
     {
         if(scene.name == "Level1")
         {
+            VanSpawnPoint = GameObject.Find("VanSpawnPoint");
+            AvaSpawnPoint = GameObject.Find("AvaSpawnPoint");
             SpawnPlayer();
         }
     }
 
     public void SpawnPlayer()
     {
-        if(PhotonNetwork.IsMasterClient)
-        PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0); 
+        if (PhotonNetwork.IsMasterClient)
+        PhotonNetwork.Instantiate(mainPlayer.name, VanSpawnPoint.transform.position, mainPlayer.transform.rotation, 0); 
         else
-        PhotonNetwork.Instantiate(clientPlayer.name, clientPlayer.transform.position, clientPlayer.transform.rotation, 0);
+        PhotonNetwork.Instantiate(clientPlayer.name, AvaSpawnPoint.transform.position, clientPlayer.transform.rotation, 0);
     }
     public void MoveScene()
     {
