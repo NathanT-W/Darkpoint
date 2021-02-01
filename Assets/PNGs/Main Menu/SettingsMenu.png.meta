@@ -1,0 +1,286 @@
+fileFormatVersion: 2
+guid: 96de76764ee3aba42a3d81a2f6aa9cde
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1439269751016821913
+    second: Volume_Text
+  - first:
+      213: 1994601704484348806
+    second: SettingsMenu_1
+  - first:
+      213: 5626590619599678837
+    second: SettingsMenu_2
+  - first:
+      213: 4127393660501232198
+    second: SettingsMenu_3
+  - first:
+      213: 7135535092922304008
+    second: SettingsMenu_4
+  - first:
+      213: 1760735785924879452
+    second: SettingsMenu_5
+  - first:
+      213: 1805851768395760875
+    second: Slider_Pin
+  - first:
+      213: -2950421090787912122
+    second: Slider
+  - first:
+      213: -5032367506853189776
+    second: Language_Text
+  - first:
+      213: 8064213336103166042
+    second: SettingsMenu_9
+  - first:
+      213: -7870939253376120051
+    second: SettingsMenu_10
+  - first:
+      213: 7879373083319021250
+    second: SettingsMenu_11
+  - first:
+      213: 7727921121233289783
+    second: SettingsMenu_12
+  - first:
+      213: 1755130034059970097
+    second: SettingsMenu_13
+  - first:
+      213: -4473544640134994650
+    second: SettingsMenu_14
+  - first:
+      213: -3430979527037494972
+    second: SettingsMenu_15
+  - first:
+      213: -6331021044724072818
+    second: Button_01
+  - first:
+      213: 3046807934501203073
+    second: Button_02
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Volume_Text
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 295
+        width: 200
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b6daa79cfa60ce0800000000000000
+      internalID: -1439269751016821913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slider_Pin
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 235
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be48d349d9caf0910800000000000000
+      internalID: 1805851768395760875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slider
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 247
+        width: 376
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64614c166affd07d0800000000000000
+      internalID: -2950421090787912122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Language_Text
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 161
+        width: 255
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0772cc64a60792ab0800000000000000
+      internalID: -5032367506853189776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_01
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 24
+        width: 245
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ef2bb27e1b328a0800000000000000
+      internalID: -6331021044724072818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_02
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 5
+        width: 246
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c29ca7caf684a20800000000000000
+      internalID: 3046807934501203073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
