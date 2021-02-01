@@ -154,7 +154,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.27649}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -165,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 3.5529795}
   m_EdgeRadius: 0
 --- !u!4 &52727198
 Transform:
@@ -817,6 +817,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1255463125}
+    - target: {fileID: 3838043839223104575, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
+      propertyPath: devTesting
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
 --- !u!1 &593043532
@@ -1336,11 +1340,41 @@ Transform:
   m_LocalPosition: {x: -129.50726, y: 9.191109, z: -533.582}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1934700615}
   - {fileID: 2146788396}
-  - {fileID: 1464988737}
   m_Father: {fileID: 0}
   m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1066309486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1066309487}
+  m_Layer: 0
+  m_Name: ' Characters'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1066309487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066309486}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -71.08696, y: 9.946445, z: -554.04834}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1934700615}
+  - {fileID: 1464988737}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1147936403
 GameObject:
@@ -2110,7 +2144,7 @@ MonoBehaviour:
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: ae76fcb32c7742d4b9802767560fdcbe, type: 3}
+  - {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: Robot working for the evil Chickering
@@ -2122,11 +2156,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464988735}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 129.50726, y: -9.191109, z: 533.582}
+  m_LocalPosition: {x: 71.08696, y: -9.946445, z: 554.04834}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1062805666}
-  m_RootOrder: 2
+  m_Father: {fileID: 1066309487}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1521304343
 GameObject:
@@ -2800,7 +2834,7 @@ MonoBehaviour:
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: a81a47e252b3db44aa386a4ccd8dd744, type: 3}
+  - {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: Fairy imprisoned by Chickering
@@ -2812,10 +2846,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934700613}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 129.50726, y: -9.191109, z: 533.582}
+  m_LocalPosition: {x: 71.08696, y: -9.946445, z: 554.04834}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1062805666}
+  m_Father: {fileID: 1066309487}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1972313948
@@ -3145,7 +3179,6 @@ GameObject:
   - component: {fileID: 2146788396}
   - component: {fileID: 2146788395}
   - component: {fileID: 2146788394}
-  - component: {fileID: 2146788393}
   - component: {fileID: 2146788392}
   - component: {fileID: 2146788391}
   - component: {fileID: 2146788397}
@@ -3159,6 +3192,7 @@ GameObject:
   - component: {fileID: 2146788405}
   - component: {fileID: 2146788404}
   - component: {fileID: 2146788403}
+  - component: {fileID: 2146788393}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -3183,7 +3217,7 @@ MonoBehaviour:
   storyText: Why are you beeping at me?
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: a81a47e252b3db44aa386a4ccd8dd744, type: 3}
+  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3210,7 +3244,7 @@ MonoBehaviour:
   storyText: '*Various Beeping Noises*'
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: ae76fcb32c7742d4b9802767560fdcbe, type: 3}
+  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3229,12 +3263,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2146788390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ff5d850a887844fe87ae7d366d3ab5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 2146788394}
   suppressBlockAutoSelect: 0
-  waitForFrames: 1
 --- !u!114 &2146788394
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3300,8 +3333,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2146788394}
-  selectedCommands:
-  - {fileID: 2146788404}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -3325,7 +3357,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1062805666}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2146788397
 MonoBehaviour:
@@ -3344,7 +3376,7 @@ MonoBehaviour:
   storyText: ...
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: ae76fcb32c7742d4b9802767560fdcbe, type: 3}
+  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3371,7 +3403,7 @@ MonoBehaviour:
   storyText: ' Also what is a robot?'
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: a81a47e252b3db44aa386a4ccd8dd744, type: 3}
+  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3398,7 +3430,7 @@ MonoBehaviour:
   storyText: ' What are you?'
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: a81a47e252b3db44aa386a4ccd8dd744, type: 3}
+  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3425,7 +3457,7 @@ MonoBehaviour:
   storyText: I can't but you can speak!
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: a81a47e252b3db44aa386a4ccd8dd744, type: 3}
+  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3452,7 +3484,7 @@ MonoBehaviour:
   storyText: ' I didn''t realise you could speak robot?'
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: ae76fcb32c7742d4b9802767560fdcbe, type: 3}
+  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3479,7 +3511,7 @@ MonoBehaviour:
   storyText: I'm Van...
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: ae76fcb32c7742d4b9802767560fdcbe, type: 3}
+  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3506,7 +3538,7 @@ MonoBehaviour:
   storyText: That doesn't really answer my question, but okay.
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: a81a47e252b3db44aa386a4ccd8dd744, type: 3}
+  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3533,7 +3565,7 @@ MonoBehaviour:
   storyText: ' Let me out of this cage!'
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: a81a47e252b3db44aa386a4ccd8dd744, type: 3}
+  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3560,7 +3592,7 @@ MonoBehaviour:
   storyText: A robot is me?
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: ae76fcb32c7742d4b9802767560fdcbe, type: 3}
+  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3587,7 +3619,7 @@ MonoBehaviour:
   storyText: ' Uh...'
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: ae76fcb32c7742d4b9802767560fdcbe, type: 3}
+  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3614,7 +3646,7 @@ MonoBehaviour:
   storyText: A robot.
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: ae76fcb32c7742d4b9802767560fdcbe, type: 3}
+  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1

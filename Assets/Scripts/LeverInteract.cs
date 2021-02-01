@@ -11,7 +11,7 @@ public class LeverInteract : MonoBehaviour
 
     bool interactable = false;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         interactable = true;
     }
@@ -27,6 +27,7 @@ public class LeverInteract : MonoBehaviour
     {
         if (interactable)
         {
+
             if (Input.GetKeyDown(KeyCode.E))
             {
                 activatedSwitch.SetActive(true);
