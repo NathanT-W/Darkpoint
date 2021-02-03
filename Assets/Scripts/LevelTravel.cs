@@ -10,25 +10,25 @@ public class LevelTravel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "Player")
+        if (collision.gameObject.name == "Player(Clone)")
             VanReadyToLeave = true;
-        if (collision.name == "2ndPlayer")
+        if (collision.gameObject.name == "2ndPlayer(Clone)")
             AvaReadyToLeave = true;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.name == "Player")
+        if (collision.name == "Player(Clone)")
             VanReadyToLeave = true;
-        if (collision.name == "2ndPlayer")
+        if (collision.name == "2ndPlayer(Clone)")
             AvaReadyToLeave = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.name == "Player")
+        if (collision.name == "Player(Clone)")
             VanReadyToLeave = false;
-        if (collision.name == "2ndPlayer")
+        if (collision.name == "2ndPlayer(Clone)")
             AvaReadyToLeave = false;
     }
 

@@ -65,11 +65,17 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
 
     }
 
+    void OnLeftRoom()
+    {
+        PhotonNetwork.LoadLevel("MainMenu");
+    }
+
     public void disconnect()
     {
         PhotonNetwork.LeaveRoom();
         Debug.Log("Disconnected from the room: " + RoomName);
     }
+
     [PunRPC]
     public void readyUp()
     {
@@ -128,6 +134,13 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
     void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
     {
         if(scene.name == "Level1")
+        {
+            VanSpawnPoint = GameObject.Find("VanSpawnPoint");
+            AvaSpawnPoint = GameObject.Find("AvaSpawnPoint");
+            SpawnPlayer();
+        }
+
+        if (scene.name == "Level2")
         {
             VanSpawnPoint = GameObject.Find("VanSpawnPoint");
             AvaSpawnPoint = GameObject.Find("AvaSpawnPoint");
