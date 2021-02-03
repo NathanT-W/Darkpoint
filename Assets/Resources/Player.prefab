@@ -16,8 +16,6 @@ GameObject:
   - component: {fileID: 3615811751735058965}
   - component: {fileID: -4716537173438165175}
   - component: {fileID: 807722645309766138}
-  - component: {fileID: -4852346770260506724}
-  - component: {fileID: 8123022200199786222}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -79,7 +77,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2.3}
+  m_Offset: {x: 0, y: 4.6}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -90,7 +88,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 4.5}
+  m_Size: {x: 4, y: 7.5}
   m_EdgeRadius: 0
 --- !u!114 &3838043839223104575
 MonoBehaviour:
@@ -105,9 +103,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photonView: {fileID: -5960982828714317779}
-  animator: {fileID: -4852346770260506724}
+  animator: {fileID: 2037302633866878573}
   playerSpeed: 20
-  playerJumpPower: 4000
+  playerJumpPower: 3000
   facingLeft: 0
   canJump: 0
   moveX: 0
@@ -134,7 +132,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: -4716537173438165175}
   - {fileID: 807722645309766138}
-  - {fileID: 8123022200199786222}
+  - {fileID: 0}
+  - {fileID: 2278979856175784801}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -195,43 +194,6 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 0
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
---- !u!95 &-4852346770260506724
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383467026114841825}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 89ca0724b1350324186b8147c967c4af, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8123022200199786222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383467026114841825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers:
-  - SynchronizeType: 0
-    LayerIndex: 0
 --- !u!95 &2037302633866878573
 Animator:
   serializedVersion: 3
@@ -251,6 +213,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2278979856175784801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858460926236027599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 1
+    SynchronizeType: 2
+    Name: Speed
+  - Type: 9
+    SynchronizeType: 2
+    Name: Switch
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1001 &3285040233445198476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -345,6 +331,10 @@ PrefabInstance:
     - target: {fileID: -1072425996581274141, guid: 0c07360dcc37b5a4e9d91ecf532c6a29, type: 3}
       propertyPath: m_Bounds.m_Extent.y
       value: 2.03809
+      objectReference: {fileID: 0}
+    - target: {fileID: -1072425996581274141, guid: 0c07360dcc37b5a4e9d91ecf532c6a29, type: 3}
+      propertyPath: m_Bounds.m_Extent.x
+      value: 0.6829001
       objectReference: {fileID: 0}
     - target: {fileID: 737892967934582851, guid: 0c07360dcc37b5a4e9d91ecf532c6a29, type: 3}
       propertyPath: m_Name
