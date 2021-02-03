@@ -5,11 +5,16 @@ using Photon.Pun;
 using Photon.Realtime;
 public class LeverInteract : MonoBehaviour
 {
-
     public GameObject activatedSwitch;
+
     public GameObject cageDoorClosed;
     public GameObject cageDoorOpen;
     public GameObject cageDoorCollider;
+
+    public GameObject hatchDoorOpen;
+    public GameObject hatchDoorClosed;
+    public GameObject LevelTravelBox;
+
     public PhotonView photonView;
 
     bool interactable = false;
@@ -30,7 +35,6 @@ public class LeverInteract : MonoBehaviour
     {
         if (interactable)
         {
-
             if (Input.GetKeyDown(KeyCode.E))
             {
                 photonView.RPC("openCage", RpcTarget.All);
@@ -43,9 +47,16 @@ public class LeverInteract : MonoBehaviour
     void openCage()
     {
         activatedSwitch.SetActive(true);
+
         cageDoorClosed.SetActive(false);
         cageDoorOpen.SetActive(true);
         cageDoorCollider.SetActive(false);
+
+        hatchDoorOpen.SetActive(true);
+        hatchDoorClosed.SetActive(false);
+
+        LevelTravelBox.SetActive(true);
+
         interactable = false;
     }
 }

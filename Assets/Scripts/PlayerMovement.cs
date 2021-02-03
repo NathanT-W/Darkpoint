@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool devTesting = false;
 
-    public string name = "player1";
+    public string name = "Player";
 
     private float selfSpeed;
 

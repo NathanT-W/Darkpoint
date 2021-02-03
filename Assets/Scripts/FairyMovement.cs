@@ -20,7 +20,7 @@ public class FairyMovement : MonoBehaviour
 
     public bool devTesting = false;
 
-    public string name = "player2";
+    public string name = "2ndPlayer";
 
     private float selfSpeed;
 
@@ -47,7 +47,7 @@ public class FairyMovement : MonoBehaviour
     {
         moveX = Input.GetAxis("Horizontal");
 
-        animator.SetFloat("Speed", Mathf.Abs(moveX));
+        //animator.SetFloat("Speed", Mathf.Abs(moveX));
 
         if (moveX < 0.0f && facingLeft == true)
         {
@@ -91,7 +91,7 @@ public class FairyMovement : MonoBehaviour
     private void SmoothNetMovement()
     {
         transform.position = Vector3.Lerp(transform.position, selfPosition, Time.deltaTime * 10);
-        animator.SetFloat("Speed", Mathf.Abs(moveX));
+        //animator.SetFloat("Speed", Mathf.Abs(moveX));
     }
 
     private void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -99,7 +99,7 @@ public class FairyMovement : MonoBehaviour
         if (stream.IsWriting)
         {
             stream.SendNext(transform.position);
-            stream.SendNext(animator.GetFloat("Speed"));
+            //stream.SendNext(animator.GetFloat("Speed"));
         }
         else
         {
