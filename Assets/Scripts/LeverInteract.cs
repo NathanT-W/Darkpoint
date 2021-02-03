@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
+using Photon.Realtime;
 public class LeverInteract : MonoBehaviour
 {
 
@@ -9,6 +10,7 @@ public class LeverInteract : MonoBehaviour
     public GameObject cageDoorClosed;
     public GameObject cageDoorOpen;
     public GameObject cageDoorCollider;
+    public PhotonView photonView;
 
     bool interactable = false;
 
@@ -20,7 +22,7 @@ public class LeverInteract : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        photonView = (PhotonView) gameObject.GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -31,11 +33,19 @@ public class LeverInteract : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E))
             {
-                activatedSwitch.SetActive(true);
-                cageDoorClosed.SetActive(false);
-                cageDoorOpen.SetActive(true);
-                cageDoorCollider.SetActive(false);
+                photonView.RPC("openCage", RpcTarget.All);
+                print("test");
             }
         }
+    }
+
+    [PunRPC]
+    void openCage()
+    {
+        activatedSwitch.SetActive(true);
+        cageDoorClosed.SetActive(false);
+        cageDoorOpen.SetActive(true);
+        cageDoorCollider.SetActive(false);
+        interactable = false;
     }
 }

@@ -41,6 +41,7 @@ MonoBehaviour:
   - readyUp
   - unReadyUp
   - MoveScene
+  - openCage
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0
