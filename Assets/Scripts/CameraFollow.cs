@@ -8,16 +8,20 @@ public class CameraFollow : MonoBehaviour
 	public Transform playerTransform;
 	public PhotonView photonView;
 
-   void Start()
-   {
-		GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-		foreach(GameObject player in players)
+	void Start()
+	{
+		GameObject Van = GameObject.FindGameObjectWithTag("Player");
+		GameObject Ava = GameObject.FindGameObjectWithTag("Fairy");
+
+		if (Van.GetComponent<PhotonView>().IsMine)
+		{
+			playerTransform = Van.transform;
+		}
+        else
         {
-            {
-				this.playerTransform = player.transform;
-				break;
-            }
+			playerTransform = Ava.transform;
         }
+
 	}
 
    void Update()

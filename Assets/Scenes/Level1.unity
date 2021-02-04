@@ -414,7 +414,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124710679}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -103.6, y: 50.3, z: 0}
+  m_LocalPosition: {x: -103.5, y: 50.3, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1915377945}
@@ -994,7 +994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1066309487}
   m_Layer: 0
-  m_Name: ' Characters'
+  m_Name: Characters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1540,7 +1540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344167746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -159.1735, y: -12.278864, z: 0}
+  m_LocalPosition: {x: -165.3, y: -16.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2261,6 +2261,7 @@ GameObject:
   - component: {fileID: 1997982045}
   - component: {fileID: 1997982044}
   - component: {fileID: 1997982047}
+  - component: {fileID: 1997982048}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2327,7 +2328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997982043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -140.7, y: -3.7, z: -10}
+  m_LocalPosition: {x: -115.7, y: -6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2340,13 +2341,28 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997982043}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97611153225d9fa40b337d60c497ca04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
   photonView: {fileID: 0}
+--- !u!114 &1997982048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997982043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8231dd8b1ed93d44289efd2444a5c969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Van: {fileID: 0}
+  Ava: {fileID: 0}
+  flowchart: {fileID: 2146788390}
 --- !u!1 &2124566658
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,13 +2445,14 @@ GameObject:
   - component: {fileID: 2146788404}
   - component: {fileID: 2146788403}
   - component: {fileID: 2146788393}
+  - component: {fileID: 2146788408}
   m_Layer: 0
   m_Name: Flowchart
-  m_TagString: Untagged
+  m_TagString: Flowchart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2146788391
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2518,8 +2535,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 67
-    y: 68
+    x: 70
+    y: 76
     width: 109
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2542,6 +2559,7 @@ MonoBehaviour:
   - {fileID: 2146788405}
   - {fileID: 2146788403}
   - {fileID: 2146788404}
+  - {fileID: 2146788408}
   suppressAllAutoSelections: 0
 --- !u!114 &2146788395
 MonoBehaviour:
@@ -2569,7 +2587,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2146788394}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 2146788392}
   variables: []
   description: 
   stepPause: 0
@@ -2892,3 +2911,20 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &2146788408
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146788390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  targetObject: {fileID: 1997982043}
+  methodName: cutsceneEnd
+  delay: 0

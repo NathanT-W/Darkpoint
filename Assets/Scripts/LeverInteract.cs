@@ -38,7 +38,6 @@ public class LeverInteract : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 photonView.RPC("openCage", RpcTarget.All);
-                print("test");
             }
         }
     }
