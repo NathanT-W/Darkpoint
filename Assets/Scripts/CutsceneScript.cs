@@ -21,7 +21,7 @@ public class CutsceneScript : MonoBehaviour
         Van.GetComponentInChildren<Animator>().SetFloat("Speed", 10);
         if (!cutsceneBegin)
         {
-            Van.transform.position = Vector3.Lerp(Van.transform.position, endPoint, 0.00025f);
+            Van.transform.position = Vector3.Lerp(Van.transform.position, endPoint, 0.0005f);
         }
 
         if(Van.transform.position.x > -120.8)
@@ -37,7 +37,7 @@ public class CutsceneScript : MonoBehaviour
         yield return new WaitForSeconds(1);
         endPoint = new Vector3(Van.transform.position.x + 110, Van.transform.position.y, Van.transform.position.z);
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(7);
         Van.GetComponentInChildren<Animator>().Play("Van_Idle");
 
         if (cutsceneBegin)
