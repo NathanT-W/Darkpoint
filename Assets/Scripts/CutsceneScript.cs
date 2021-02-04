@@ -10,15 +10,12 @@ public class CutsceneScript : MonoBehaviour
     Vector3 endPoint;
     bool cutsceneBegin = false;
 
-    private void Awake()
-    {
-        StartCoroutine(cutsceneStart());
-    }
 
     private void Update()
     {
         Van = GameObject.FindGameObjectWithTag("Player");
         Van.GetComponentInChildren<Animator>().SetFloat("Speed", 10);
+        endPoint = new Vector3(Van.transform.position.x + 110, Van.transform.position.y, Van.transform.position.z);
         if (!cutsceneBegin)
         {
             Van.transform.position = Vector3.Lerp(Van.transform.position, endPoint, 0.0005f);
@@ -28,21 +25,11 @@ public class CutsceneScript : MonoBehaviour
         {
             cutsceneBegin = true;
             Van.GetComponentInChildren<Animator>().SetFloat("Speed", 0);
+            Debug.Log("Help");
         }
-
-    }
-
-    IEnumerator cutsceneStart()
-    {
-        yield return new WaitForSeconds(1);
-        endPoint = new Vector3(Van.transform.position.x + 110, Van.transform.position.y, Van.transform.position.z);
-
-        yield return new WaitForSeconds(7);
-        Van.GetComponentInChildren<Animator>().Play("Van_Idle");
 
         if (cutsceneBegin)
         {
-            GameObject.FindGameObjectWithTag("Flowchart");
             flowchart.SetActive(true);
         }
 
