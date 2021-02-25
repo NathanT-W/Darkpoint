@@ -23,8 +23,6 @@ public class PlayerMovement : MonoBehaviour
 
     public string name = "Player";
 
-    private float selfSpeed;
-
     void Start()
     {
         photonView = (PhotonView)gameObject.GetComponent<PhotonView>();
@@ -91,7 +89,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void SmoothNetMovement()
     {
-        transform.position = Vector3.Lerp(transform.position, selfPosition, Time.deltaTime * 10);
         animator.SetFloat("Speed", Mathf.Abs(moveX));
     }
 
@@ -99,13 +96,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if(stream.IsWriting)
         {
-            stream.SendNext(transform.position);
             stream.SendNext(animator.GetFloat("Speed"));
         }
         else
         {
-            selfPosition = (Vector3)stream.ReceiveNext();
-            selfSpeed = (float)stream.ReceiveNext();
+            animator.SetFloat("Speed", (float)stream.ReceiveNext());
         }
     }
 }

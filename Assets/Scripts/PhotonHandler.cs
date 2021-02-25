@@ -150,10 +150,14 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
 
     public void SpawnPlayer()
     {
+        GameObject player;
+
         if (PhotonNetwork.IsMasterClient)
-        PhotonNetwork.Instantiate(mainPlayer.name, VanSpawnPoint.transform.position, mainPlayer.transform.rotation, 0); 
+        player = PhotonNetwork.Instantiate(mainPlayer.name, VanSpawnPoint.transform.position, mainPlayer.transform.rotation, 0);
         else
-        PhotonNetwork.Instantiate(clientPlayer.name, AvaSpawnPoint.transform.position, clientPlayer.transform.rotation, 0);
+        player = PhotonNetwork.Instantiate(clientPlayer.name, AvaSpawnPoint.transform.position, clientPlayer.transform.rotation, 0);
+
+        player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
     }
     public void MoveScene()
     {

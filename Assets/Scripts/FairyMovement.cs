@@ -37,7 +37,7 @@ public class FairyMovement : MonoBehaviour
         {
             if (photonView.IsMine)
                 PlayerMove();
-            else SmoothNetMovement();
+            // else SmoothNetMovement();
         }
         else
             PlayerMove();
@@ -88,9 +88,9 @@ public class FairyMovement : MonoBehaviour
         }
     }
 
-    private void SmoothNetMovement()
+  /*  private void SmoothNetMovement()
     {
-        transform.position = Vector3.Lerp(transform.position, selfPosition, Time.deltaTime * 10);
+        gameObject.GetComponent<Rigidbody2D>().position = Vector3.Lerp(transform.position, selfPosition, Time.deltaTime * 10);
         //animator.SetFloat("Speed", Mathf.Abs(moveX));
     }
 
@@ -98,7 +98,7 @@ public class FairyMovement : MonoBehaviour
     {
         if (stream.IsWriting)
         {
-            stream.SendNext(transform.position);
+            stream.SendNext(gameObject.GetComponent<Rigidbody2D>().position);
             //stream.SendNext(animator.GetFloat("Speed"));
         }
         else
@@ -106,5 +106,5 @@ public class FairyMovement : MonoBehaviour
             selfPosition = (Vector3)stream.ReceiveNext();
             selfSpeed = (float)stream.ReceiveNext();
         }
-    }
+    } */
 }
