@@ -44,8 +44,14 @@ public class LevelTravel : MonoBehaviour
     {
         if(VanReadyToLeave&&AvaReadyToLeave)
         {
-            Van.transform.position = VanSpawnPoint2.transform.position;
-            Ava.transform.position = AvaSpawnPoint2.transform.position;
+            StartCoroutine(Teleport());
         }
+    }
+
+    IEnumerator Teleport()
+    {
+        Van.transform.position = VanSpawnPoint2.transform.position;
+        yield return new WaitForSeconds(1);
+        Ava.transform.position = AvaSpawnPoint2.transform.position;
     }
 }
