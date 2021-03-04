@@ -8,6 +8,14 @@ public class LevelTravel : MonoBehaviour
     private bool VanReadyToLeave;
     private bool AvaReadyToLeave;
 
+    public GameObject Van, Ava, VanSpawnPoint2, AvaSpawnPoint2;
+
+    void Start()
+    {
+        Van = GameObject.Find("Player(Clone)");
+        Ava = GameObject.Find("2ndPlayer(Clone)");
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player(Clone)")
@@ -36,7 +44,14 @@ public class LevelTravel : MonoBehaviour
     {
         if(VanReadyToLeave&&AvaReadyToLeave)
         {
-            PhotonNetwork.LoadLevel("Level2");
+            StartCoroutine(Teleport());
         }
+    }
+
+    IEnumerator Teleport()
+    {
+        Van.transform.position = VanSpawnPoint2.transform.position;
+        yield return new WaitForSeconds(1);
+        Ava.transform.position = AvaSpawnPoint2.transform.position;
     }
 }

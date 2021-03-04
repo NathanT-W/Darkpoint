@@ -135,15 +135,8 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
     {
         if(scene.name == "Level1")
         {
-            VanSpawnPoint = GameObject.Find("VanSpawnPoint");
-            AvaSpawnPoint = GameObject.Find("AvaSpawnPoint");
-            SpawnPlayer();
-        }
-
-        if (scene.name == "Level2")
-        {
-            VanSpawnPoint = GameObject.Find("VanSpawnPoint");
-            AvaSpawnPoint = GameObject.Find("AvaSpawnPoint");
+            VanSpawnPoint = GameObject.Find("VanSpawnPoint1");
+            AvaSpawnPoint = GameObject.Find("AvaSpawnPoint1");
             SpawnPlayer();
         }
     }
