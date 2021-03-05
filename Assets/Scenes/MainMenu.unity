@@ -3230,7 +3230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 12.218611, y: 228.79807}
+  scrollPos: {x: 21.561117, y: 229.36}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -3241,10 +3241,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1017409997}
-  selectedCommands:
-  - {fileID: 1017410003}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 1017410005}
   description: This flowchart controls the main menu music

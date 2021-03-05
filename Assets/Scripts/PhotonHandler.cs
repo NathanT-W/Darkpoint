@@ -137,7 +137,6 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
         {
             VanSpawnPoint = GameObject.Find("VanSpawnPoint1");
             AvaSpawnPoint = GameObject.Find("AvaSpawnPoint1");
-            SpawnPlayer();
         }
     }
 

@@ -57,5 +57,7 @@ public class LeverInteract : MonoBehaviour
         LevelTravelBox.SetActive(true);
 
         interactable = false;
+
+        gameObject.GetComponent<SecondCutsceneScript>().enabled = true;
     }
 }
