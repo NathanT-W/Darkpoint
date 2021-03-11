@@ -8,6 +8,9 @@ TagManager:
   - Fairy
   - Flowchart
   - PhotonMono
+  - TurnLeft
+  - TurnRight
+  - Enemy
   layers:
   - Default
   - TransparentFX
