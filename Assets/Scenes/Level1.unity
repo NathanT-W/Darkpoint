@@ -650,12 +650,14 @@ PlayableDirector:
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: 5224815602946583286, guid: e5426fa750360a0428fd1338b5df944e, type: 2}
-    value: {fileID: 278750776}
   - key: {fileID: -8567374457138785319, guid: e5426fa750360a0428fd1338b5df944e, type: 2}
     value: {fileID: 2146788390}
   - key: {fileID: 8091805640217859171, guid: e5426fa750360a0428fd1338b5df944e, type: 2}
     value: {fileID: 278750777}
+  - key: {fileID: 2383800891968368452, guid: e5426fa750360a0428fd1338b5df944e, type: 2}
+    value: {fileID: 278750777}
+  - key: {fileID: 1701927186993688177, guid: e5426fa750360a0428fd1338b5df944e, type: 2}
+    value: {fileID: 278750776}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &206700262
@@ -841,6 +843,10 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 523447100728390451, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
+      propertyPath: lever
+      value: 
+      objectReference: {fileID: 52727196}
     - target: {fileID: 1383467026114841825, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_Name
       value: PlayerCutscene
@@ -899,19 +905,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1402975541236044183, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -84.907555
+      value: -158.8
       objectReference: {fileID: 0}
     - target: {fileID: 1402975541236044183, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -24.835636
+      value: -28.26
       objectReference: {fileID: 0}
     - target: {fileID: 1402975541236044183, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 8.279182
       objectReference: {fileID: 0}
     - target: {fileID: 1402975541236044183, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 10.14188
       objectReference: {fileID: 0}
     - target: {fileID: 1402975541236044183, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_AnchorMin.x
@@ -931,11 +937,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1402975541236044183, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0.5000001
       objectReference: {fileID: 0}
     - target: {fileID: 1402975541236044183, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0.06326766
       objectReference: {fileID: 0}
     - target: {fileID: 1402975541236044183, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_LocalScale.y
@@ -959,7 +965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2037302633866878573, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2154111891467268888, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1064,6 +1070,14 @@ PrefabInstance:
     - target: {fileID: 6203636169812044414, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.8307335
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203636169812044414, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6052966
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203636169812044414, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000000043795083
       objectReference: {fileID: 0}
     - target: {fileID: 6615975680728901467, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2310,12 +2324,12 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 9a21d53e3e1cbc445a77a00e14396095, type: 2}
   m_InitialState: 0
-  m_WrapMode: 2
+  m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 1729117232145817591, guid: 9a21d53e3e1cbc445a77a00e14396095, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 278750776}
   - key: {fileID: 7479056907079290217, guid: 9a21d53e3e1cbc445a77a00e14396095, type: 2}
     value: {fileID: 95768723}
   m_ExposedReferences:
@@ -4437,8 +4451,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1754061377}
-  selectedCommands:
-  - {fileID: 1754061375}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -5543,14 +5556,14 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 3bb6bafce66f46445956b1199e6109bd, type: 2}
   m_InitialState: 0
-  m_WrapMode: 2
+  m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 531779343676000567, guid: 3bb6bafce66f46445956b1199e6109bd, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 278750776}
   - key: {fileID: -4431627407765336418, guid: 3bb6bafce66f46445956b1199e6109bd, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 278750777}
   - key: {fileID: -6851668292750015281, guid: 3bb6bafce66f46445956b1199e6109bd, type: 2}
     value: {fileID: 95768723}
   - key: {fileID: 2315108304072088484, guid: 3bb6bafce66f46445956b1199e6109bd, type: 2}
@@ -5894,8 +5907,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 70
-    y: 74
+    x: 68
+    y: 77
     width: 109
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -5946,7 +5959,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2146788394}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 2146788409}
   variables: []
   description: 
   stepPause: 0
