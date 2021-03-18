@@ -8,6 +8,7 @@ TagManager:
   - Fairy
   - Flowchart
   - PhotonMono
+  - Lever
   layers:
   - Default
   - TransparentFX

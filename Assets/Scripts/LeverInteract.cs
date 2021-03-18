@@ -17,7 +17,8 @@ public class LeverInteract : MonoBehaviour
 
     public PhotonView photonView;
 
-    bool interactable = false;
+    public bool interactable = false;
+    public bool interacted = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -56,7 +57,7 @@ public class LeverInteract : MonoBehaviour
 
         LevelTravelBox.SetActive(true);
 
-        interactable = false;
+        interacted = true;
 
         gameObject.GetComponent<SecondCutsceneScript>().enabled = true;
     }
