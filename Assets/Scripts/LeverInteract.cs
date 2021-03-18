@@ -52,10 +52,10 @@ public class LeverInteract : MonoBehaviour
         cageDoorOpen.SetActive(true);
         cageDoorCollider.SetActive(false);
 
-        hatchDoorOpen.SetActive(true);
-        hatchDoorClosed.SetActive(false);
+        //hatchDoorOpen.SetActive(true);
+        //hatchDoorClosed.SetActive(false);
 
-        LevelTravelBox.SetActive(true);
+        //LevelTravelBox.SetActive(true);
 
         interacted = true;
 
