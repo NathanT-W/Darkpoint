@@ -18,14 +18,14 @@ public class CutsceneScript : MonoBehaviour
             GameObject photonObject = GameObject.Find("PhotonDontDestroy");
             photonObject.GetComponent<PhotonHandler>().SpawnPlayer();
 
-            gameObject.GetComponent<CutsceneScript>().enabled = false;
-
             gameObject.GetComponent<CameraFollow>().enabled = true;
 
             cutsceneEnder.Play();
 
             Van.GetComponent<PlayerCutsceneView>().cutsceneDone = false;
             Ava.GetComponent<PlayerCutsceneView>().cutsceneDone = false;
+
+            gameObject.GetComponent<CutsceneScript>().enabled = false;
         }
     }
 }

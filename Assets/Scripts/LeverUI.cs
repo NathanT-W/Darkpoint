@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class LeverUI : MonoBehaviour
 {
@@ -13,7 +15,7 @@ public class LeverUI : MonoBehaviour
 
     private void OnGUI()
     {
-        if (lever.GetComponent<LeverInteract>().interactable && lever.GetComponent<LeverInteract>().interacted == false)
+        if (lever.GetComponent<LeverInteract>().interactable && lever.GetComponent<LeverInteract>().interacted == false && gameObject.GetComponent<PhotonView>().IsMine)
         {
             GUI.Label(new Rect(Screen.width / 2, Screen.height / 2, 650, 300), "Press 'E' to Interact");
         }

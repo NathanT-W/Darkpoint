@@ -90,7 +90,7 @@ public class EnemyAI : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collider)
     {
-        if(collider.gameObject.CompareTag("Player") || collider.gameObject.CompareTag("2ndPlayer"))
+        if(collider.gameObject.CompareTag("Player") || collider.gameObject.CompareTag("Fairy"))
         {
             collider.transform.position = ResetSpawnPoint.transform.position;
             Debug.Log("hit!");
