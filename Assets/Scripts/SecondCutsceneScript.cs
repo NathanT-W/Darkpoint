@@ -1,15 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Playables;
+using Photon.Pun;
 
 public class SecondCutsceneScript : MonoBehaviour
 {
-
-    public GameObject cutsceneVan, Van, cutsceneAva, Ava, mainCamera;
+    public GameObject cutsceneVan, Van, cutsceneAva, Ava, mainCamera, interactableButton;
     public PlayableDirector cutsceneStarter, cutsceneEnder;
 
-    // Start is called before the first frame update
     void Start()
     {
         mainCamera.GetComponent<CameraFollow>().enabled = false;
@@ -25,7 +22,6 @@ public class SecondCutsceneScript : MonoBehaviour
 
     void Update()
     {
-
         if (cutsceneVan.GetComponent<PlayerCutsceneView>().cutsceneDone && cutsceneAva.GetComponent<PlayerCutsceneView>().cutsceneDone)
         {
             Van.SetActive(true);
@@ -41,6 +37,8 @@ public class SecondCutsceneScript : MonoBehaviour
             cutsceneVan.GetComponent<PlayerCutsceneView>().cutsceneDone = false;
             cutsceneAva.GetComponent<PlayerCutsceneView>().cutsceneDone = false;
 
+            if (!PhotonNetwork.IsMasterClient)
+                interactableButton.SetActive(true);
         }
     }
 }

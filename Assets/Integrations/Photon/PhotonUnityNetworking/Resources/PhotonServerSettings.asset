@@ -45,6 +45,7 @@ MonoBehaviour:
   - setVariable
   - setAllVariables
   - openHatch
+  - displayButtonAsInteractableForFairy
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0

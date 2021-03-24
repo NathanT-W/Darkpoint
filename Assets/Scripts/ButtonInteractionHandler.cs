@@ -8,6 +8,7 @@ public class ButtonInteractionHandler : MonoBehaviour
     public GameObject hatchOpen;
     public GameObject hatchClosed;
     public GameObject LevelTravelBox;
+    public GameObject interactableButton;
 
     PhotonView photonView;
 
@@ -43,6 +44,7 @@ public class ButtonInteractionHandler : MonoBehaviour
     void openHatch()
     {
         buttonNotPressed.SetActive(false);
+        interactableButton.SetActive(false);
         buttonPressed.SetActive(true);
 
         hatchClosed.SetActive(false);

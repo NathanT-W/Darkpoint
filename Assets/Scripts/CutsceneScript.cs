@@ -6,7 +6,7 @@ using Photon.Pun;
 using Photon.Realtime;
 public class CutsceneScript : MonoBehaviour
 {
-    public GameObject Van, Ava;
+    public GameObject Van, Ava, interactableLever;
     public PlayableDirector cutsceneEnder;
 
     void Update()
@@ -26,6 +26,9 @@ public class CutsceneScript : MonoBehaviour
             Ava.GetComponent<PlayerCutsceneView>().cutsceneDone = false;
 
             gameObject.GetComponent<CutsceneScript>().enabled = false;
+
+            if (PhotonNetwork.IsMasterClient)
+                interactableLever.SetActive(true);
         }
     }
 }

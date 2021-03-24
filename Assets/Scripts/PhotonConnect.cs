@@ -48,7 +48,7 @@ public class PhotonConnect : MonoBehaviourPunCallbacks
 
         section3.SetActive(true);
 
-        Debug.Log("Disconnected from Photon Services"); 
+        Debug.Log("Disconnected from Photon Services");
     }
 
     public void OnConnectedToRoom()

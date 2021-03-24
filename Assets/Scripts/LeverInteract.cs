@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+
 public class LeverInteract : MonoBehaviour
 {
     public GameObject activatedSwitch;
+    public GameObject interactableLever;
 
     public GameObject cageDoorClosed;
     public GameObject cageDoorOpen;
@@ -46,7 +48,8 @@ public class LeverInteract : MonoBehaviour
     [PunRPC]
     void openCage()
     {
-        activatedSwitch.SetActive(true);
+        activatedSwitch.SetActive(false);
+        interactableLever.SetActive(false);
 
         cageDoorClosed.SetActive(false);
         cageDoorOpen.SetActive(true);
