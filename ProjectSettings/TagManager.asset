@@ -11,8 +11,7 @@ TagManager:
   - TurnLeft
   - TurnRight
   - Enemy
-  - Lever
-  - Button
+  - Bush
   layers:
   - Default
   - TransparentFX
