@@ -27,6 +27,11 @@ public class LeverInteract : MonoBehaviour
         interactable = true;
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        interactable = false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

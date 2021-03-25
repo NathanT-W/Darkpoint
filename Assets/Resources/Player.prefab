@@ -207,6 +207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lever: {fileID: 0}
+  button: {fileID: 0}
+  interactingPlayer: {fileID: 0}
 --- !u!95 &2037302633866878573
 Animator:
   serializedVersion: 3

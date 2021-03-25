@@ -2027,7 +2027,7 @@ GameObject:
   - component: {fileID: 882610758}
   m_Layer: 0
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2089,6 +2089,8 @@ MonoBehaviour:
   hatchClosed: {fileID: 1284150449}
   LevelTravelBox: {fileID: 1485779029}
   interactableButton: {fileID: 441933181}
+  interactable: 0
+  interacted: 0
 --- !u!58 &882610758
 CircleCollider2D:
   m_ObjectHideFlags: 0

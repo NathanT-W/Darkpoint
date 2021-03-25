@@ -12,7 +12,8 @@ public class ButtonInteractionHandler : MonoBehaviour
 
     PhotonView photonView;
 
-    bool interactable = false;
+    public bool interactable = false;
+    public bool interacted = false;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -53,5 +54,6 @@ public class ButtonInteractionHandler : MonoBehaviour
         LevelTravelBox.SetActive(true);
 
         interactable = false;
+        interacted = true;
     }
 }
