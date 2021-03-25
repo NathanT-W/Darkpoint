@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     public float turnTime = 5;
     public GameObject ResetSpawnPoint;
     public GameObject Player;
+    public Animator animator;
 
     public bool MoveLeftRightRandom;
     public bool MoveLeftRightDelay;
@@ -18,6 +19,8 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
+        
+
         if (MoveLeftRightRandom && !MoveLeftRightDelay && !FollowPlayer)
         {
             Invoke("ChangeDirectionRandom", 1);
@@ -42,21 +45,28 @@ public class EnemyAI : MonoBehaviour
     {
         if (CanMove)
         {
-            if(FollowPlayer)
+            animator.SetFloat("Speed", speed);
+
+            if (FollowPlayer)
             {
-                transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime);
+                transform.localScale = new Vector2(-1 , 1);
+                transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, 2* speed * Time.deltaTime);
             }
             else if (MoveRight)
             {
+                
                 transform.Translate(2 * Time.deltaTime * speed, 0, 0);
-                transform.localScale = new Vector2(3, 3);
+                transform.localScale = new Vector2(-1, 1);
             }
             else
             {
+                animator.SetFloat("Speed", speed);
                 transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
-                transform.localScale = new Vector2(-3, 3);
+                transform.localScale = new Vector2(1, 1);
             }
+
         }
+        else animator.SetFloat("Speed", 0);
     }
 
     void OnTriggerEnter2D(Collider2D trigger)
@@ -102,6 +112,7 @@ public class EnemyAI : MonoBehaviour
         CanMove = false;
         yield return new WaitForSeconds(5);
         CanMove = true;
+
         MoveRight = !MoveRight;
     }
 }
