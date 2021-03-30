@@ -2,6 +2,8 @@
 
 public class BirdAI : MonoBehaviour
 {
+    public GameObject cogwheel;
+
     public int speed = 8;
 
     bool moveTowardsRight = true;
@@ -10,6 +12,12 @@ public class BirdAI : MonoBehaviour
     {
         if (other.gameObject.name == "TurningPoint")
             moveTowardsRight = !moveTowardsRight;
+
+        if (other.gameObject.CompareTag("Player")) // should be Fairy, but for testing it is Player
+        {
+            Instantiate(cogwheel, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
     }
 
     void Update()
