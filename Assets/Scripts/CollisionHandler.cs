@@ -2,15 +2,23 @@
 
 public class CollisionHandler : MonoBehaviour
 {
+    private CogCounter counterRef;
+    private bool hasCollided = false;
+
     void Start()
     {
-        GameObject van = GameObject.FindGameObjectWithTag("Player");
-        GameObject ava = GameObject.FindGameObjectWithTag("Fairy");
+        counterRef = GameObject.Find("GameManager").GetComponent<CogCounter>();
+    }
 
-        if (van)
-            Physics2D.IgnoreCollision(van.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (this.hasCollided)
+            return;
 
-        if (ava)
-            Physics2D.IgnoreCollision(ava.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        if(other.gameObject.tag == "Player" || other.gameObject.tag == "Fairy")
+        {
+            counterRef.Increment();
+            Destroy(this.gameObject);
+        }
     }
 }

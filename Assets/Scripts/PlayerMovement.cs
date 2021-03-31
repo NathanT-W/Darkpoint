@@ -95,6 +95,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Bush")
+        {
+            other.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1f);
+        }
+    }
+
     private void SmoothNetMovement()
     {
         animator.SetFloat("Speed", Mathf.Abs(moveX));

@@ -88,23 +88,39 @@ public class FairyMovement : MonoBehaviour
         }
     }
 
-  /*  private void SmoothNetMovement()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        gameObject.GetComponent<Rigidbody2D>().position = Vector3.Lerp(transform.position, selfPosition, Time.deltaTime * 10);
-        //animator.SetFloat("Speed", Mathf.Abs(moveX));
+        if (other.gameObject.tag == "Bush")
+        {
+            other.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
+        }
     }
 
-    private void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    void OnTriggerExit2D(Collider2D other)
     {
-        if (stream.IsWriting)
+        if (other.gameObject.tag == "Bush")
         {
-            stream.SendNext(gameObject.GetComponent<Rigidbody2D>().position);
-            //stream.SendNext(animator.GetFloat("Speed"));
+            other.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1f);
         }
-        else
-        {
-            selfPosition = (Vector3)stream.ReceiveNext();
-            selfSpeed = (float)stream.ReceiveNext();
-        }
-    } */
+    }
+
+    /*  private void SmoothNetMovement()
+      {
+          gameObject.GetComponent<Rigidbody2D>().position = Vector3.Lerp(transform.position, selfPosition, Time.deltaTime * 10);
+          //animator.SetFloat("Speed", Mathf.Abs(moveX));
+      }
+
+      private void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+      {
+          if (stream.IsWriting)
+          {
+              stream.SendNext(gameObject.GetComponent<Rigidbody2D>().position);
+              //stream.SendNext(animator.GetFloat("Speed"));
+          }
+          else
+          {
+              selfPosition = (Vector3)stream.ReceiveNext();
+              selfSpeed = (float)stream.ReceiveNext();
+          }
+      } */
 }
