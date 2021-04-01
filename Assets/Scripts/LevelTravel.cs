@@ -57,6 +57,12 @@ public class LevelTravel : MonoBehaviour
         Ava.transform.position = AvaSpawnPoint2.transform.position;
 
         GameManager.currentLevel = 2;
+
+        Van.SetActive(false);
+        Ava.SetActive(false);
+
+        Camera.main.GetComponent<CameraFollow>().enabled = false;
+        Camera.main.GetComponent<CutsceneEndScript>().secondLevelCutscenePlay();
     }
     IEnumerator TeleportLevel3()
     {
