@@ -7652,6 +7652,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 127851496, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2771743379617278154, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: randTime
       value: 0
@@ -7670,11 +7674,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6255569696822545289, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.534462
+      value: -34.405693
       objectReference: {fileID: 0}
     - target: {fileID: 6255569696822545289, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -181.30028
+      value: -181.12524
       objectReference: {fileID: 0}
     - target: {fileID: 6255569696822545289, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7716,8 +7720,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyPrefab
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 127851496, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
+    - target: {fileID: 8785684427783034293, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
 --- !u!1 &1321765579
 GameObject:

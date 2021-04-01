@@ -52,9 +52,12 @@ public class LevelTravel : MonoBehaviour
         VanReadyToLeave = false;
         AvaReadyToLeave = false;
 
-        Van.transform.position = VanSpawnPoint2.transform.position;
         yield return new WaitForSeconds(1);
+
+        Van.transform.position = VanSpawnPoint2.transform.position;
         Ava.transform.position = AvaSpawnPoint2.transform.position;
+
+        
 
         GameManager.currentLevel = 2;
 
@@ -69,8 +72,9 @@ public class LevelTravel : MonoBehaviour
         VanReadyToLeave = false;
         AvaReadyToLeave = false;
 
-        Van.transform.position = VanSpawnPoint3.transform.position;
         yield return new WaitForSeconds(1);
+
+        Van.transform.position = VanSpawnPoint3.transform.position;
         Ava.transform.position = AvaSpawnPoint3.transform.position;
 
         GameManager.currentLevel = 3;

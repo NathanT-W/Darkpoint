@@ -73,7 +73,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (!FollowPlayer)
         {
-            if (trigger.gameObject.CompareTag("TurnRight"))
+            if (trigger.gameObject.tag == "TurnRight")
             {
                 if (MoveLeftRightDelay)
                 {
@@ -84,7 +84,7 @@ public class EnemyAI : MonoBehaviour
                     MoveRight = true;
                 }
             }
-            else if (trigger.gameObject.CompareTag("TurnLeft"))
+            else if (trigger.gameObject.tag == "TurnLeft")
             {
                 if (MoveLeftRightDelay)
                 {
