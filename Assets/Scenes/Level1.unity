@@ -435,7 +435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62614936}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 160.9, y: -98.1, z: -75.01111}
+  m_LocalPosition: {x: 78.3, y: -101, z: -75.01111}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1297865024}
@@ -450,9 +450,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 62614936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d51c0231792cbb439f1b90c9484276a, type: 3}
+  m_Script: {fileID: 11500000, guid: c452f1c07e8dc51408b32b0a5437bd71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VanSpawnPoint3: {fileID: 1927283155}
+  AvaSpawnPoint3: {fileID: 1681965410}
 --- !u!61 &62614939
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7654,7 +7656,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 127851496, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2771743379617278154, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: randTime
@@ -7662,7 +7664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2771743379617278154, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: MoveLeftRightDelay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2771743379617278154, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: FollowPlayer
@@ -7670,15 +7672,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2771743379617278154, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: MoveLeftRightRandom
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2771743379617278154, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
+      propertyPath: VanSpawnPoint2
+      value: 
+      objectReference: {fileID: 763015915}
+    - target: {fileID: 2771743379617278154, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
+      propertyPath: AvaSpawnPoint2
+      value: 
+      objectReference: {fileID: 1705238086}
+    - target: {fileID: 2771743379617278154, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
+      propertyPath: VanSpawnPoint3
+      value: 
+      objectReference: {fileID: 1927283156}
+    - target: {fileID: 2771743379617278154, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
+      propertyPath: AvaSpawnPoint3
+      value: 
+      objectReference: {fileID: 1681965411}
     - target: {fileID: 6255569696822545289, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -34.405693
       objectReference: {fileID: 0}
     - target: {fileID: 6255569696822545289, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -181.12524
+      value: -187.2
       objectReference: {fileID: 0}
     - target: {fileID: 6255569696822545289, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8920,6 +8938,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d51c0231792cbb439f1b90c9484276a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VanSpawnPoint2: {fileID: 763015914}
+  AvaSpawnPoint2: {fileID: 1705238085}
 --- !u!61 &1485779031
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11688,7 +11708,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997982043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -115.7, y: -6, z: -10}
+  m_LocalPosition: {x: -116.3, y: 8.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
@@ -13,7 +14,7 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
 
     public PhotonButtons Buttons;
 
-    public GameObject mainPlayer, clientPlayer, photonScripts, readyUpButton, unReadyUpButton;
+    public GameObject mainPlayer, clientPlayer, photonScripts, readyUpButton, unReadyUpButton, scrollView, roomListingPrefab;
     public GameObject VanSpawnPoint, AvaSpawnPoint;
 
     public Text roomName, player2Name;
@@ -21,6 +22,7 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
     private string RoomName, PlayerName;
 
     private int noOfReadyPlayers;
+
 
     private void Awake()
     {
@@ -155,6 +157,42 @@ public class PhotonHandler: MonoBehaviourPunCallbacks
     {
         Buttons = null;
         PhotonNetwork.LoadLevel("Level1");
+    }
+
+    public void PopulateListView(List<RoomInfo> roomList)
+    {
+        float y = 0.15f;
+        foreach (RoomInfo room in roomList)
+        {
+            if(room.PlayerCount < 2)
+            {
+                GameObject roomListing = GameObject.Instantiate(roomListingPrefab, scrollView.transform);
+                roomListing.GetComponentInChildren<Text>().text = room.Name;
+                roomListing.GetComponent<Button>().onClick.AddListener(delegate { ListJoinRoom(room.Name); });
+              //  roomListing.transform.position += new Vector3(0, y, 0);
+                y -= 0.65f;
+            }
+
+        }
+    }
+
+    public void ListJoinRoom(string roomName)
+    {
+        Buttons.joinRoomInput.text = roomName;
+    }
+
+    public override void OnRoomListUpdate(List<RoomInfo> roomList)
+    {
+        int children = scrollView.transform.childCount;
+        if(children > 0)
+        {
+            for (int i = 0; i < children; i++)
+            {
+                GameObject.Destroy(scrollView.transform.GetChild(i).gameObject);
+            }
+        }
+
+        PopulateListView(roomList);
     }
 
 }

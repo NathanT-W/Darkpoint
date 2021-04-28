@@ -1489,6 +1489,7 @@ MonoBehaviour:
   Ava: {fileID: 0}
   Milo: {fileID: 0}
   interlude: {fileID: 0}
+  secondLevel: {fileID: 0}
 --- !u!114 &1120923237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1576,6 +1577,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 737301203}
     m_Modifications:
+    - target: {fileID: 127851496, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2771743379617278154, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: MoveLeftRightDelay
       value: 1
@@ -1590,7 +1595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6255569696822545289, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -99.2
+      value: -109.5
       objectReference: {fileID: 0}
     - target: {fileID: 6255569696822545289, guid: 695b5423ecf323544a4ae462ed598c6b, type: 3}
       propertyPath: m_LocalPosition.z

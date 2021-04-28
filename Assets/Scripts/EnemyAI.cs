@@ -9,7 +9,13 @@ public class EnemyAI : MonoBehaviour
     public bool MoveRight;
     public float randTime;
     public float turnTime = 5;
-    public GameObject ResetSpawnPoint;
+
+    public Transform VanSpawnPoint2;
+    public Transform AvaSpawnPoint2;
+
+    public Transform VanSpawnPoint3;
+    public Transform AvaSpawnPoint3;
+
     public GameObject Player;
     public Animator animator;
 
@@ -19,19 +25,18 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
-        
-
         if (MoveLeftRightRandom && !MoveLeftRightDelay && !FollowPlayer)
         {
-            Invoke("ChangeDirectionRandom", 1);
-            ResetSpawnPoint = GameObject.Find("VanSpawnPoint2");
+            //Invoke("ChangeDirectionRandom", 1);
         }
+
         else if(!MoveLeftRightRandom && !MoveLeftRightDelay && FollowPlayer)
         {
             Player = GameObject.FindGameObjectWithTag("Player");
         }
     }
 
+    /*
     void ChangeDirectionRandom()
     {
         float randTime = Random.Range(1, 10);
@@ -39,7 +44,7 @@ public class EnemyAI : MonoBehaviour
         MoveRight = !MoveRight;
 
         Invoke("ChangeDirectionRandom", randTime);
-    }
+    } */
 
     void Update()
     {
@@ -100,10 +105,28 @@ public class EnemyAI : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collider)
     {
-        if(collider.gameObject.CompareTag("Player") || collider.gameObject.CompareTag("Fairy"))
+        if(collider.gameObject.tag == "Player")
         {
-            collider.transform.position = ResetSpawnPoint.transform.position;
-            Debug.Log("hit!");
+            if(GameManager.currentLevel == 2)
+            {
+                collider.transform.position = VanSpawnPoint2.transform.position;
+            }
+            else if(GameManager.currentLevel == 3)
+            {
+                collider.transform.position = VanSpawnPoint3.transform.position;
+            }
+        }
+
+        if (collider.gameObject.tag == "Fairy")
+        {
+            if (GameManager.currentLevel == 2)
+            {
+                collider.transform.position = AvaSpawnPoint2.transform.position;
+            }
+            else if (GameManager.currentLevel == 3)
+            {
+                collider.transform.position = AvaSpawnPoint3.transform.position;
+            }
         }
     }
 
