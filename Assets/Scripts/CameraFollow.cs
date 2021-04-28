@@ -37,6 +37,9 @@ public class CameraFollow : MonoBehaviour
 		{
 			transform.position = playerTransform.position + new Vector3(0,35,-10);
 
+            if (devTest)
+                return;
+
 			if (transform.position.x < -115)
 				transform.SetPositionAndRotation(new Vector3(-115, transform.position.y, transform.position.z), transform.rotation);
 
