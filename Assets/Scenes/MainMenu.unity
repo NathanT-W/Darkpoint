@@ -2245,7 +2245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &663078080
 Transform:
   m_ObjectHideFlags: 0
@@ -7038,8 +7038,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99a2911aa67e92040a09505f553c27d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundSlider: {fileID: 930784138}
-  soundEffectsSlider: {fileID: 935604307}
+  backgroundSlider: {fileID: 935604307}
+  soundEffectsSlider: {fileID: 930784138}
   backgroundAudio: {fileID: 663078081}
   soundEffectsAudio: []
 --- !u!4 &1721295692
