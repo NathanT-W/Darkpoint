@@ -6,5 +6,5 @@ During level press p to open menu.
 Known Bugs:
 Soemtimes Ava can spawn off to the left side of the levels after a cutscene. Not sure what causes it, currently requires restart to fix. Only happens occasionally.
 Sometimes the Cutscene sprites can stay on screen after a cutscene has finished playing, showing duplicates of the characters. This happens when players finish a cutscene too quickly. Doesn't affect gameplay, can continue as normal.
-Transition to level 3 not working, end of level 2 is end.
+Transition to level 3 not working, end of level 2 is end of game for now.
 Jenny likes to hang out in the first level, she's not meant to be visible there, please ignore her.
