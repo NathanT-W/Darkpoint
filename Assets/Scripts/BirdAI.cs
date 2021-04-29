@@ -13,9 +13,11 @@ public class BirdAI : MonoBehaviour
         if (other.gameObject.name == "TurningPoint")
             moveTowardsRight = !moveTowardsRight;
 
-        if (other.gameObject.CompareTag("Player")) // should be Fairy, but for testing it is Player
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Fairy")) // should be only Fairy?
         {
-            Instantiate(cogwheel, transform.position, transform.rotation);
+            GameObject cogwheelInstance = Instantiate(cogwheel, transform.position, transform.rotation);
+            cogwheelInstance.GetComponent<Rigidbody2D>().gravityScale = 0.8f;
+            cogwheelInstance.GetComponent<CollisionHandler>().canInteract = false;
             Destroy(gameObject);
         }
     }
@@ -23,5 +25,6 @@ public class BirdAI : MonoBehaviour
     void Update()
     {
         transform.Translate((moveTowardsRight ? 2 : -2) * Time.deltaTime * speed, 0, 0);
+        transform.localScale = new Vector2(moveTowardsRight ? -1 : 1, 1);
     }
 }

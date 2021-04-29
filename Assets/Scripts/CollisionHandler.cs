@@ -4,6 +4,7 @@ public class CollisionHandler : MonoBehaviour
 {
     private CogCounter counterRef;
     private bool hasCollided = false;
+    public bool canInteract = true;
 
     void Start()
     {
@@ -12,7 +13,10 @@ public class CollisionHandler : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (this.hasCollided)
+        if (other.gameObject.tag == "Ground" && !canInteract)
+            canInteract = true;
+
+        if (this.hasCollided || !canInteract)
             return;
 
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "Fairy")
