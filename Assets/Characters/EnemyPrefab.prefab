@@ -102,7 +102,7 @@ MonoBehaviour:
   - {fileID: 7194867516188941496}
   - {fileID: 7997529347758313940}
   m_Bounds:
-    m_Center: {x: -0.221807, y: -0.5495479, z: 0}
+    m_Center: {x: -0.22179937, y: -0.54955554, z: 0}
     m_Extent: {x: 0.8768252, y: 3.2185302, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -206,7 +206,7 @@ MonoBehaviour:
   - {fileID: 7097700658355763705}
   - {fileID: 7997529347758313940}
   m_Bounds:
-    m_Center: {x: -0.0127161145, y: 1.8087957, z: 0}
+    m_Center: {x: -0.0127161145, y: 1.8088033, z: 0}
     m_Extent: {x: 0.91775525, y: 0.7759502, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -415,7 +415,7 @@ MonoBehaviour:
   - {fileID: 6204662561353292667}
   - {fileID: 7194867516188941496}
   m_Bounds:
-    m_Center: {x: -0.00068616867, y: 0.3483218, z: 0}
+    m_Center: {x: -0.00068616867, y: 0.34831417, z: 0}
     m_Extent: {x: 1.25653, y: 1.7212102, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -610,7 +610,7 @@ MonoBehaviour:
   - {fileID: 7997529347758313940}
   - {fileID: 5261016966290970240}
   m_Bounds:
-    m_Center: {x: -0.060130954, y: 1.3304892, z: 0}
+    m_Center: {x: -0.060130954, y: 1.3304968, z: 0}
     m_Extent: {x: 1.1795704, y: 0.5505605, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -748,7 +748,7 @@ MonoBehaviour:
   - {fileID: 7997529347758313940}
   - {fileID: 551748401713141073}
   m_Bounds:
-    m_Center: {x: 0.011795759, y: 0.7202331, z: 0}
+    m_Center: {x: 0.011795759, y: 0.7202407, z: 0}
     m_Extent: {x: 2.04291, y: 1.5971249, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -851,7 +851,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 2522539701970519286}
   m_Bounds:
-    m_Center: {x: 0.6856104, y: 0.42100453, z: 0}
+    m_Center: {x: 0.6856104, y: 0.42101216, z: 0}
     m_Extent: {x: 1.5086706, y: 2.3495202, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1151,11 +1151,15 @@ MonoBehaviour:
   MoveRight: 0
   randTime: 0
   turnTime: 5
-  ResetSpawnPoint: {fileID: 0}
+  VanSpawnPoint2: {fileID: 0}
+  AvaSpawnPoint2: {fileID: 0}
+  VanSpawnPoint3: {fileID: 0}
+  AvaSpawnPoint3: {fileID: 0}
   Player: {fileID: 0}
+  cogwheel: {fileID: 9000237657282373085, guid: 00fa2cd893fe3f546bbcf649f9e43fe5, type: 3}
   animator: {fileID: 2771743379617278153}
-  MoveLeftRightRandom: 1
-  MoveLeftRightDelay: 0
+  MoveLeftRightRandom: 0
+  MoveLeftRightDelay: 1
   FollowPlayer: 0
 --- !u!61 &127851497
 BoxCollider2D:
@@ -1338,7 +1342,7 @@ MonoBehaviour:
   - {fileID: 7997529347758313940}
   - {fileID: 7097700658355763705}
   m_Bounds:
-    m_Center: {x: -0.013156295, y: 1.3335358, z: 0}
+    m_Center: {x: -0.013156295, y: 1.333551, z: 0}
     m_Extent: {x: 1.428195, y: 1.8481897, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1443,8 +1447,8 @@ MonoBehaviour:
   - {fileID: 3451314683897016705}
   - {fileID: 5159139302708204254}
   m_Bounds:
-    m_Center: {x: 0.14508086, y: -0.5301461, z: 0}
-    m_Extent: {x: 0.8767851, y: 3.2168732, z: 0}
+    m_Center: {x: 0.14508086, y: -0.5301423, z: 0}
+    m_Extent: {x: 0.8767851, y: 3.2168694, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &9016401245615967240

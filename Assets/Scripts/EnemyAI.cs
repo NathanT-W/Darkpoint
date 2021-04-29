@@ -17,6 +17,7 @@ public class EnemyAI : MonoBehaviour
     public Transform AvaSpawnPoint3;
 
     public GameObject Player;
+    public GameObject cogwheel;
     public Animator animator;
 
     public bool MoveLeftRightRandom;
@@ -59,7 +60,6 @@ public class EnemyAI : MonoBehaviour
             }
             else if (MoveRight)
             {
-                
                 transform.Translate(2 * Time.deltaTime * speed, 0, 0);
                 transform.localScale = new Vector2(-1, 1);
             }
@@ -127,6 +127,12 @@ public class EnemyAI : MonoBehaviour
             {
                 collider.transform.position = AvaSpawnPoint3.transform.position;
             }
+        }
+
+        if (collider.gameObject.tag == "Boulder")
+        {
+            Instantiate(cogwheel, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
     }
 

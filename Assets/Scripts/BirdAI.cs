@@ -13,7 +13,7 @@ public class BirdAI : MonoBehaviour
         if (other.gameObject.name == "TurningPoint")
             moveTowardsRight = !moveTowardsRight;
 
-        if (other.gameObject.CompareTag("Player")) // should be Fairy, but for testing it is Player
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Fairy")) // should be only Fairy?
         {
             Instantiate(cogwheel, transform.position, transform.rotation);
             Destroy(gameObject);
