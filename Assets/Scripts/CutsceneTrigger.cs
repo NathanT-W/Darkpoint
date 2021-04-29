@@ -14,5 +14,7 @@ public class CutsceneTrigger : MonoBehaviour
 
         GameObject.FindGameObjectWithTag("Player").SetActive(false);
         GameObject.FindGameObjectWithTag("Fairy").SetActive(false);
+
+        gameObject.GetComponent<CutsceneTrigger>().enabled = false;
     }
 }
