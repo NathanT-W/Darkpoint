@@ -453,8 +453,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c452f1c07e8dc51408b32b0a5437bd71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VanSpawnPoint3: {fileID: 1927283155}
-  AvaSpawnPoint3: {fileID: 1681965410}
 --- !u!61 &62614939
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1020,6 +1018,57 @@ Transform:
   m_Father: {fileID: 1915377945}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &141860358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141860359}
+  - component: {fileID: 141860360}
+  m_Layer: 0
+  m_Name: Jenny
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &141860359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141860358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1066309487}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &141860360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141860358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Woman
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: 3414f4c492fde1443951f7f3d69b10e0, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
 --- !u!1 &155193502
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,9 +2400,10 @@ GameObject:
   - component: {fileID: 356618945}
   - component: {fileID: 356618944}
   - component: {fileID: 356618943}
-  - component: {fileID: 356618942}
   - component: {fileID: 356618940}
   - component: {fileID: 356618939}
+  - component: {fileID: 356618942}
+  - component: {fileID: 356618941}
   m_Layer: 0
   m_Name: Level2InterludeFlowchart
   m_TagString: Untagged
@@ -2393,7 +2443,7 @@ MonoBehaviour:
     to go after him!"
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2420,7 +2470,34 @@ MonoBehaviour:
   storyText: '*Annoyed beeping*'
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &356618941
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356618937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  indentLevel: 0
+  storyText: My master is near, and he is upset. We must leave quickly.
+  description: 
+  character: {fileID: 1464988736}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2442,16 +2519,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 9
+  itemId: 19
   indentLevel: 0
-  storyText: ' Now we must escape from this place! Help me find a way out.'
+  storyText: What's all that racket? Guards, search the area!
   description: 
-  character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
+  character: {fileID: 522542449}
+  portrait: {fileID: 21300000, guid: 61f72634e75973c4cbe8bb88c9b01319, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
-  extendPrevious: 1
+  extendPrevious: 0
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
@@ -2516,6 +2593,7 @@ MonoBehaviour:
   - {fileID: 356618939}
   - {fileID: 356618940}
   - {fileID: 356618942}
+  - {fileID: 356618941}
   - {fileID: 356618943}
   suppressAllAutoSelections: 0
 --- !u!114 &356618946
@@ -2638,6 +2716,57 @@ Transform:
   m_Father: {fileID: 2007903813}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &407684249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 407684250}
+  - component: {fileID: 407684251}
+  m_Layer: 0
+  m_Name: Jenny Named
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &407684250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407684249}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1066309487}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &407684251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407684249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Jenny
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: 3414f4c492fde1443951f7f3d69b10e0, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
 --- !u!1 &413826865
 GameObject:
   m_ObjectHideFlags: 0
@@ -3287,6 +3416,57 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 3}
   m_EdgeRadius: 0
+--- !u!1 &522542447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 522542448}
+  - component: {fileID: 522542449}
+  m_Layer: 0
+  m_Name: Chickering
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &522542448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522542447}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1066309487}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &522542449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522542447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Lord Chickering
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: 61f72634e75973c4cbe8bb88c9b01319, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: All seeing lord of the city of Darkpoint.
 --- !u!1 &542896604
 GameObject:
   m_ObjectHideFlags: 0
@@ -3876,7 +4056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1362634234}
+  selectedFlowchart: {fileID: 925246635}
 --- !u!4 &669994447
 Transform:
   m_ObjectHideFlags: 1
@@ -4617,6 +4797,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cogText: {fileID: 542896606}
+--- !u!1 &881269241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 881269242}
+  - component: {fileID: 881269243}
+  m_Layer: 0
+  m_Name: Van
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &881269242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881269241}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 71.08696, y: -9.946445, z: 554.04834}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1066309487}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &881269243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881269241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Sapient Metallic Object
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: Robot working for the evil Chickering
 --- !u!1 &882610754
 GameObject:
   m_ObjectHideFlags: 0
@@ -4711,6 +4942,57 @@ CircleCollider2D:
   m_Offset: {x: 0.027284622, y: 0.090949655}
   serializedVersion: 2
   m_Radius: 1.4549631
+--- !u!1 &890154457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 890154458}
+  - component: {fileID: 890154459}
+  m_Layer: 0
+  m_Name: Van Robot?
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &890154458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890154457}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 71.08696, y: -9.946445, z: 554.04834}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1066309487}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &890154459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890154457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Robot?
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: Robot working for the evil Chickering
 --- !u!1 &908672916
 GameObject:
   m_ObjectHideFlags: 0
@@ -4827,6 +5109,574 @@ Transform:
   m_Father: {fileID: 1285277290}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &925246627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 925246628}
+  - component: {fileID: 925246635}
+  - component: {fileID: 925246634}
+  - component: {fileID: 925246633}
+  - component: {fileID: 925246632}
+  - component: {fileID: 925246630}
+  - component: {fileID: 925246629}
+  - component: {fileID: 925246631}
+  - component: {fileID: 925246643}
+  - component: {fileID: 925246642}
+  - component: {fileID: 925246641}
+  - component: {fileID: 925246640}
+  - component: {fileID: 925246639}
+  - component: {fileID: 925246638}
+  - component: {fileID: 925246637}
+  - component: {fileID: 925246636}
+  - component: {fileID: 925246646}
+  - component: {fileID: 925246645}
+  - component: {fileID: 925246644}
+  - component: {fileID: 925246647}
+  m_Layer: 0
+  m_Name: Level2EndFlowchart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &925246628
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 129.50726, y: -9.191109, z: 533.582}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1062805666}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &925246629
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  indentLevel: 0
+  storyText: Mama! I made it home, and I brought friends!
+  description: 
+  character: {fileID: 1321765581}
+  portrait: {fileID: 21300000, guid: d0cfaf2cd6f1a60438543764e407f51a, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &925246630
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
+  indentLevel: 0
+  storyText: Milo!
+  description: 
+  character: {fileID: 141860360}
+  portrait: {fileID: 21300000, guid: 3414f4c492fde1443951f7f3d69b10e0, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &925246631
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  indentLevel: 0
+  storyText: But I made some new friends!
+  description: 
+  character: {fileID: 2134520647}
+  portrait: {fileID: 21300000, guid: d0cfaf2cd6f1a60438543764e407f51a, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &925246632
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 3
+  indentLevel: 0
+  targetObject: {fileID: 1997982043}
+  methodName: cutsceneEnd
+  delay: 0
+--- !u!114 &925246633
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff5d850a887844fe87ae7d366d3ab5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 925246634}
+  suppressBlockAutoSelect: 0
+--- !u!114 &925246634
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 67
+    y: 65
+    width: 131
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 0
+  blockName: CutsceneStart
+  description: 
+  eventHandler: {fileID: 925246633}
+  commandList:
+  - {fileID: 925246629}
+  - {fileID: 925246630}
+  - {fileID: 925246641}
+  - {fileID: 925246642}
+  - {fileID: 925246631}
+  - {fileID: 925246643}
+  - {fileID: 925246640}
+  - {fileID: 925246639}
+  - {fileID: 925246638}
+  - {fileID: 925246637}
+  - {fileID: 925246636}
+  - {fileID: 925246646}
+  - {fileID: 925246644}
+  - {fileID: 925246645}
+  - {fileID: 925246647}
+  - {fileID: 925246632}
+  suppressAllAutoSelections: 0
+--- !u!114 &925246635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  scrollPos: {x: 0, y: 0}
+  variablesScrollPos: {x: 0, y: 0}
+  variablesExpanded: 1
+  blockViewHeight: 400
+  zoom: 1
+  scrollViewRect:
+    serializedVersion: 2
+    x: -343
+    y: -340
+    width: 1114
+    height: 859
+  selectedBlocks:
+  - {fileID: 925246634}
+  selectedCommands:
+  - {fileID: 925246647}
+  variables: []
+  description: 
+  stepPause: 0
+  colorCommands: 1
+  hideComponents: 1
+  saveSelection: 1
+  localizationId: 
+  showLineNumbers: 0
+  hideCommands: []
+  luaEnvironment: {fileID: 0}
+  luaBindingName: flowchart
+--- !u!114 &925246636
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 27
+  indentLevel: 0
+  storyText: ' I am trying to return to my home.
+
+'
+  description: 
+  character: {fileID: 1934700614}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &925246637
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 26
+  indentLevel: 0
+  storyText: By chance do you know a way out of this town?
+  description: 
+  character: {fileID: 1934700614}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &925246638
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 25
+  indentLevel: 0
+  storyText: ...
+  description: 
+  character: {fileID: 1464988736}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &925246639
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 24
+  indentLevel: 0
+  storyText: "It\u2019s no problem at all, we were happy to keep him company."
+  description: 
+  character: {fileID: 1934700614}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &925246640
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 23
+  indentLevel: 0
+  storyText: Oh, Sorry for any trouble he caused. He is a handful. My name is Jenny.
+  description: 
+  character: {fileID: 407684251}
+  portrait: {fileID: 21300000, guid: 3414f4c492fde1443951f7f3d69b10e0, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &925246641
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 22
+  indentLevel: 0
+  storyText: ' Where have you been!'
+  description: 
+  character: {fileID: 141860360}
+  portrait: {fileID: 21300000, guid: 3414f4c492fde1443951f7f3d69b10e0, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &925246642
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 21
+  indentLevel: 0
+  storyText: ' I told you not to run around during the Festival.'
+  description: 
+  character: {fileID: 141860360}
+  portrait: {fileID: 21300000, guid: 3414f4c492fde1443951f7f3d69b10e0, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &925246643
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  indentLevel: 0
+  storyText: ' They made sure I got home safe Mama!'
+  description: 
+  character: {fileID: 2134520647}
+  portrait: {fileID: 21300000, guid: d0cfaf2cd6f1a60438543764e407f51a, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &925246644
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 30
+  indentLevel: 0
+  storyText: " Haven\u2019t seen any of your kind in years."
+  description: 
+  character: {fileID: 407684251}
+  portrait: {fileID: 21300000, guid: 3414f4c492fde1443951f7f3d69b10e0, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &925246645
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 29
+  indentLevel: 0
+  storyText: ' I''ll show you a way out, as thanks for bringing Milo home.'
+  description: 
+  character: {fileID: 407684251}
+  portrait: {fileID: 21300000, guid: 3414f4c492fde1443951f7f3d69b10e0, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 1
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &925246646
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 28
+  indentLevel: 0
+  storyText: 'Ahh, a fairy I see. '
+  description: 
+  character: {fileID: 407684251}
+  portrait: {fileID: 21300000, guid: 3414f4c492fde1443951f7f3d69b10e0, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &925246647
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925246627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 31
+  indentLevel: 0
+  storyText: Wow! You know about us. Thank you so much, for your help.
+  description: 
+  character: {fileID: 1934700614}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &948381861
 GameObject:
   m_ObjectHideFlags: 0
@@ -6020,6 +6870,7 @@ Transform:
   - {fileID: 1362634235}
   - {fileID: 1754061368}
   - {fileID: 356618938}
+  - {fileID: 925246628}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6050,9 +6901,18 @@ Transform:
   m_LocalPosition: {x: -71.08696, y: 9.946445, z: -554.04834}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1642271898}
   - {fileID: 1934700615}
+  - {fileID: 1468417788}
+  - {fileID: 881269242}
+  - {fileID: 890154458}
   - {fileID: 1464988737}
   - {fileID: 1321765580}
+  - {fileID: 2134520646}
+  - {fileID: 141860359}
+  - {fileID: 407684250}
+  - {fileID: 1852820866}
+  - {fileID: 522542448}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7773,7 +8633,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1066309487}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1321765581
 MonoBehaviour:
@@ -7790,7 +8650,8 @@ MonoBehaviour:
   nameText: Child
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
-  portraits: []
+  portraits:
+  - {fileID: 21300000, guid: d0cfaf2cd6f1a60438543764e407f51a, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -8130,7 +8991,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1362634233}
   selectedCommands:
-  - {fileID: 1362634236}
+  - {fileID: 1362634240}
   variables: []
   description: 
   stepPause: 0
@@ -8190,7 +9051,7 @@ MonoBehaviour:
   storyText: Thank you for freeing me! My name is Ava
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8217,7 +9078,7 @@ MonoBehaviour:
   storyText: "Couldn\u2019t you have fit through the bars\u2026"
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8244,7 +9105,7 @@ MonoBehaviour:
   storyText: No. It was blocked by a magical barrier.
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8271,7 +9132,7 @@ MonoBehaviour:
   storyText: ' Now we must escape from this place! Help me find a way out.'
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8298,7 +9159,7 @@ MonoBehaviour:
   storyText: You have much to learn my child.
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8325,7 +9186,7 @@ MonoBehaviour:
   storyText: What is magic?
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8835,7 +9696,7 @@ GameObject:
   - component: {fileID: 1464988737}
   - component: {fileID: 1464988736}
   m_Layer: 0
-  m_Name: Van
+  m_Name: Van Named
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8857,10 +9718,10 @@ MonoBehaviour:
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  - {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
-  description: Robot working for the evil Chickering
+  description: Robot formerly working for the evil Chickering
 --- !u!4 &1464988737
 Transform:
   m_ObjectHideFlags: 0
@@ -8873,7 +9734,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1066309487}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1467982406
 GameObject:
@@ -8908,6 +9769,57 @@ Transform:
   m_Father: {fileID: 1899069829}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1468417787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468417788}
+  - component: {fileID: 1468417789}
+  m_Layer: 0
+  m_Name: Ava Second Form
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1468417788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468417787}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 71.08696, y: -9.946445, z: 554.04834}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1066309487}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1468417789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468417787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Ava
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: d48d6b63143f9704b8f78c2d93f81be1, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: Fairy imprisoned by Chickering, now able to assume her true form.
 --- !u!1 &1485779029
 GameObject:
   m_ObjectHideFlags: 0
@@ -9748,6 +10660,57 @@ Transform:
   m_Father: {fileID: 1115766131}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1642271897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1642271898}
+  - component: {fileID: 1642271899}
+  m_Layer: 0
+  m_Name: Ava
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1642271898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642271897}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 71.08696, y: -9.946445, z: 554.04834}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1066309487}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1642271899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642271897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Weird Flying Orb
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: Fairy imprisoned by Chickering
 --- !u!1 &1660599648
 GameObject:
   m_ObjectHideFlags: 0
@@ -10097,7 +11060,7 @@ MonoBehaviour:
   storyText: Van, don't be rude, he's a child.
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -10124,7 +11087,7 @@ MonoBehaviour:
   storyText: What is this small human?
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -10151,11 +11114,11 @@ MonoBehaviour:
   storyText: ' Where are your parents?'
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
-  extendPrevious: 0
+  extendPrevious: 1
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
@@ -10178,7 +11141,7 @@ MonoBehaviour:
   storyText: Why are you being so loud? ...
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -10205,7 +11168,7 @@ MonoBehaviour:
   storyText: Whoa!!
   description: 
   character: {fileID: 1321765581}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: d0cfaf2cd6f1a60438543764e407f51a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -10294,7 +11257,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1754061377}
   selectedCommands:
-  - {fileID: 1754061388}
+  - {fileID: 1754061384}
   variables: []
   description: 
   stepPause: 0
@@ -10323,7 +11286,7 @@ MonoBehaviour:
   storyText: ' Do you want to be friends!?'
   description: 
   character: {fileID: 1321765581}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: d0cfaf2cd6f1a60438543764e407f51a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -10350,7 +11313,7 @@ MonoBehaviour:
   storyText: ' How did you do that!? '
   description: 
   character: {fileID: 1321765581}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: d0cfaf2cd6f1a60438543764e407f51a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -10377,7 +11340,7 @@ MonoBehaviour:
   storyText: ' What are you?!'
   description: 
   character: {fileID: 1321765581}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: d0cfaf2cd6f1a60438543764e407f51a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -10404,7 +11367,7 @@ MonoBehaviour:
   storyText: I'm not small! I'm big boy!
   description: 
   character: {fileID: 1321765581}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: d0cfaf2cd6f1a60438543764e407f51a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -10431,7 +11394,7 @@ MonoBehaviour:
   storyText: Big mouth too.
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -10458,7 +11421,7 @@ MonoBehaviour:
   storyText: Van!
   description: 
   character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -10847,6 +11810,57 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+--- !u!1 &1852820865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1852820866}
+  - component: {fileID: 1852820867}
+  m_Layer: 0
+  m_Name: Willow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1852820866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852820865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1066309487}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1852820867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852820865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Willow
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: 02b207de62c48354f9b5cb961aff087c, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
 --- !u!1 &1858120025
 GameObject:
   m_ObjectHideFlags: 0
@@ -11372,7 +12386,7 @@ GameObject:
   - component: {fileID: 1934700615}
   - component: {fileID: 1934700614}
   m_Layer: 0
-  m_Name: Ava
+  m_Name: Ava Named
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11394,7 +12408,7 @@ MonoBehaviour:
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
+  - {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: Fairy imprisoned by Chickering
@@ -11410,7 +12424,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1066309487}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1972313948
 GameObject:
@@ -12474,6 +13488,57 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+--- !u!1 &2134520645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2134520646}
+  - component: {fileID: 2134520647}
+  m_Layer: 0
+  m_Name: Milo Named
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2134520646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134520645}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1066309487}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2134520647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134520645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Milo
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: d0cfaf2cd6f1a60438543764e407f51a, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
 --- !u!1 &2146788390
 GameObject:
   m_ObjectHideFlags: 0
@@ -12523,8 +13588,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Why are you beeping at me?
   description: 
-  character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
+  character: {fileID: 1642271899}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -12550,8 +13615,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: '*Various Beeping Noises*'
   description: 
-  character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  character: {fileID: 881269243}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -12642,7 +13707,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2146788394}
   selectedCommands:
-  - {fileID: 2146788409}
+  - {fileID: 2146788404}
   variables: []
   description: 
   stepPause: 0
@@ -12684,8 +13749,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: ...
   description: 
-  character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  character: {fileID: 881269243}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -12711,8 +13776,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: ' Also what is a robot?'
   description: 
-  character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
+  character: {fileID: 1642271899}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -12738,8 +13803,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: ' What are you?'
   description: 
-  character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
+  character: {fileID: 1642271899}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -12765,8 +13830,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: I can't but you can speak!
   description: 
-  character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
+  character: {fileID: 1642271899}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -12792,8 +13857,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: ' I didn''t realise you could speak robot?'
   description: 
-  character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  character: {fileID: 890154459}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -12820,7 +13885,7 @@ MonoBehaviour:
   storyText: I'm Van...
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -12846,8 +13911,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: That doesn't really answer my question, but okay.
   description: 
-  character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
+  character: {fileID: 1642271899}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -12873,8 +13938,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: ' Let me out of this cage!'
   description: 
-  character: {fileID: 1934700614}
-  portrait: {fileID: 21300000, guid: e41e314ea02e22f4bad3d7531a96f27a, type: 3}
+  character: {fileID: 1642271899}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -12901,7 +13966,7 @@ MonoBehaviour:
   storyText: A robot is me?
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -12928,7 +13993,7 @@ MonoBehaviour:
   storyText: ' Uh...'
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -12955,7 +14020,7 @@ MonoBehaviour:
   storyText: A robot.
   description: 
   character: {fileID: 1464988736}
-  portrait: {fileID: 21300000, guid: 84038ccca8ae78348b1aa7eed8a9b30e, type: 3}
+  portrait: {fileID: 21300000, guid: ae9d4317d4a422a498379d49c2c244d5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
