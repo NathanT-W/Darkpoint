@@ -15125,6 +15125,100 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2123390540
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4913834474512431124, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 60d2b47672779454bb6000463fcff188, type: 3}
+    - target: {fileID: 4913834474512431124, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913834474512431210, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_Name
+      value: Level Theme
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913834475604713369, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4940903
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913834475604713369, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5564445
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913834475604713369, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.1307853
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913834475604713369, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913834475604713369, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913834475604713369, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913834475604713369, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913834475604713369, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913834475604713369, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913834475604713369, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913834475604713369, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913834475604713375, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: m_Name
+      value: SFX
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4913834475604713374, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+--- !u!1 &2123390541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4913834475604713375, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+  m_PrefabInstance: {fileID: 2123390540}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2123390542 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4913834474512431124, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+  m_PrefabInstance: {fileID: 2123390540}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2123390543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123390541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5baae14517932d347b81e61cb0888a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundAudio: {fileID: 2123390542}
+  soundEffectsAudio: []
 --- !u!1 &2124566658
 GameObject:
   m_ObjectHideFlags: 0
