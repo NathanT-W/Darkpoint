@@ -84,7 +84,7 @@ public class FairyMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            
+
         }
     }
 

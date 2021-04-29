@@ -15,7 +15,9 @@ public class BirdAI : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Fairy")) // should be only Fairy?
         {
-            Instantiate(cogwheel, transform.position, transform.rotation);
+            GameObject cogwheelInstance = Instantiate(cogwheel, transform.position, transform.rotation);
+            cogwheelInstance.GetComponent<Rigidbody2D>().gravityScale = 0.8f;
+            cogwheelInstance.GetComponent<CollisionHandler>().canInteract = false;
             Destroy(gameObject);
         }
     }
