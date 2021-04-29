@@ -23,5 +23,6 @@ public class BirdAI : MonoBehaviour
     void Update()
     {
         transform.Translate((moveTowardsRight ? 2 : -2) * Time.deltaTime * speed, 0, 0);
+        transform.localScale = new Vector2(moveTowardsRight ? -1 : 1, 1);
     }
 }
