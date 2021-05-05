@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using Photon.Pun;
 
 public class LevelTravel1 : MonoBehaviour
@@ -11,6 +12,8 @@ public class LevelTravel1 : MonoBehaviour
     private GameObject Van, Ava;
 
     public GameObject VanSpawnPoint2, AvaSpawnPoint2;
+
+    public PlayableDirector nextCutscene;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -54,7 +57,7 @@ public class LevelTravel1 : MonoBehaviour
         Ava.SetActive(false);
 
         Camera.main.GetComponent<CameraFollow>().enabled = false;
-        Camera.main.GetComponent<CutsceneEndScript>().secondLevelCutscenePlay();
+        Camera.main.GetComponent<CutsceneScript>().playCutscene(nextCutscene);
 
         //StopCoroutine(TeleportLevel2());
     }

@@ -7,8 +7,8 @@ using Photon.Realtime;
 
 public class CutsceneEndScript : MonoBehaviour
 {
-    public GameObject Van, Ava, Milo;
-    public PlayableDirector interlude, secondLevel;
+    public GameObject Van, Ava;
+    public PlayableDirector secondLevel;
 
     public void cutsceneEnd()
     {
@@ -23,13 +23,4 @@ public class CutsceneEndScript : MonoBehaviour
 
     }
 
-    public void cutsceneInterlude()
-    {
-        interlude.Play();
-    }
-
-    public void secondLevelCutscenePlay()
-    {
-        secondLevel.Play();
-    }
 }

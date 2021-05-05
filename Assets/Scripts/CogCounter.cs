@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
+
 
 public class CogCounter : MonoBehaviour
 {
@@ -11,7 +13,7 @@ public class CogCounter : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             Debug.Log(cogsCollected);
         }
@@ -21,7 +23,12 @@ public class CogCounter : MonoBehaviour
 
     public void Increment()
     {
-        cogsCollected++;
+        gameObject.GetPhotonView().RPC("IncrementSync", RpcTarget.All);
     }
 
+    [PunRPC]
+    public void IncrementSync()
+    {
+        cogsCollected++;
+    }
 }

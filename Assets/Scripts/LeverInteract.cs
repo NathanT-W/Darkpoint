@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using Photon.Pun;
 using Photon.Realtime;
 
@@ -21,6 +22,8 @@ public class LeverInteract : MonoBehaviour
 
     public bool interactable = false;
     public bool interacted = false;
+
+    public PlayableDirector nextCutscene;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -67,6 +70,8 @@ public class LeverInteract : MonoBehaviour
 
         interacted = true;
 
-        gameObject.GetComponent<SecondCutsceneScript>().enabled = true;
+        Camera.main.GetComponent<CutsceneScript>().Van = GameObject.FindGameObjectWithTag("Player");
+        Camera.main.GetComponent<CutsceneScript>().Ava = GameObject.FindGameObjectWithTag("Fairy");
+        Camera.main.GetComponent<CutsceneScript>().playCutscene(nextCutscene);
     }
 }

@@ -5,6 +5,7 @@ using Photon.Pun;
 
 public class LevelTravel2 : MonoBehaviour
 {
+
     private bool VanReadyToLeave;
     private bool AvaReadyToLeave;
 
