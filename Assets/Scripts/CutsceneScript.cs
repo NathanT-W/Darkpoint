@@ -6,9 +6,10 @@ using Photon.Pun;
 using Photon.Realtime;
 public class CutsceneScript : MonoBehaviour
 {
-    public GameObject cutsceneVan, Van, cutsceneAva, Ava, interactableLever, interactableButton, mainCamera;
+    public GameObject cutsceneVan, Van, cutsceneAva, Ava, interactableLever, interactableButton, mainCamera, cutsceneAvaTransformation, cutsceneVanTransformation, AvaTransformation, VanTransformation;
     public PlayableDirector cutsceneEnder;
     public int cutsceneNum = 0;
+
 
     void Update()
     {
@@ -36,6 +37,10 @@ public class CutsceneScript : MonoBehaviour
                     Van.SetActive(true);
                     Ava.SetActive(true);
 
+                    // VanTransformation = Van.transform.Find("PlayerVan2").gameObject;
+
+                    AvaTransformation = Ava.transform.Find("PlayerAva2").gameObject;
+
                     Van.transform.position = cutsceneVan.transform.position;
                     Ava.transform.position = cutsceneAva.transform.position;
 
@@ -53,6 +58,8 @@ public class CutsceneScript : MonoBehaviour
                 case 2:
                 case 3: 
                 case 4:
+                case 5:
+                case 6:
                     Van.SetActive(true);
                     Ava.SetActive(true);
 
@@ -86,6 +93,23 @@ public class CutsceneScript : MonoBehaviour
         Ava.SetActive(false);
 
         cutsceneToPlay.Play();
+    }
+
+    public void cutsceneTransition(int count) {
+
+        if (count == 1) {
+
+            Ava.GetComponent<BoxCollider2D>().enabled = false;
+            AvaTransformation.SetActive(true);
+            cutsceneAvaTransformation.SetActive(true);
+
+        }
+        else
+        {
+            //Van.transform.find("PlayerVan2").gameObject.SetAcive(true);
+            //cutsceneVan.transform.find("PlayerVan2").gameObject.SetAcive(true);
+        }
+
     }
 
 }
