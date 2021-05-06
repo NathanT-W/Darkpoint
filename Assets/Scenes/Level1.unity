@@ -4584,7 +4584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1362634234}
+  selectedFlowchart: {fileID: 1696656125}
 --- !u!4 &669994447
 Transform:
   m_ObjectHideFlags: 1
@@ -10843,6 +10843,7 @@ GameObject:
   - component: {fileID: 1696656140}
   - component: {fileID: 1696656142}
   - component: {fileID: 1696656143}
+  - component: {fileID: 1696656144}
   m_Layer: 0
   m_Name: Level3InitialCutscene
   m_TagString: Untagged
@@ -11050,6 +11051,7 @@ MonoBehaviour:
   - {fileID: 1696656137}
   - {fileID: 1696656143}
   - {fileID: 1696656136}
+  - {fileID: 1696656144}
   - {fileID: 1696656122}
   suppressAllAutoSelections: 0
 --- !u!114 &1696656125
@@ -11079,7 +11081,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1696656124}
   selectedCommands:
-  - {fileID: 1696656143}
+  - {fileID: 1696656144}
   variables: []
   description: 
   stepPause: 0
@@ -11583,6 +11585,33 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &1696656144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696656116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 39
+  indentLevel: 0
+  storyText: Wow, that feels a lot better. Thank you!
+  description: 
+  character: {fileID: 1934700614}
+  portrait: {fileID: 21300000, guid: e5e314ca7f639a0478d25165ed3f8de6, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1001 &1700907925
 PrefabInstance:
   m_ObjectHideFlags: 0
