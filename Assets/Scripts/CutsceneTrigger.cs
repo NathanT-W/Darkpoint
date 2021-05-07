@@ -12,7 +12,7 @@ public class CutsceneTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player") && collision.gameObject.GetPhotonView().IsMine)
+        if ((collision.gameObject.tag.Equals("Player") || collision.gameObject.tag.Equals("Fairy")) && collision.gameObject.GetPhotonView().IsMine)
         {
             gameObject.GetPhotonView().RPC("activateCutscene", RpcTarget.All);
         }
