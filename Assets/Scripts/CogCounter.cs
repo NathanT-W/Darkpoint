@@ -22,8 +22,8 @@ public class CogCounter : MonoBehaviour
 
         if (cogsCollected >= 5) {
 
-            cutsceneTrigger.SetActive(true);
-            
+            gameObject.GetPhotonView().RPC("SetTo5", RpcTarget.AllViaServer);
+       
         }
 
         cogText.text = cogsCollected.ToString();
@@ -32,6 +32,15 @@ public class CogCounter : MonoBehaviour
     public void Increment()
     {
         cogsCollected++;
+    }
+
+    [PunRPC]
+
+    public void SetTo5() {
+
+        cogsCollected = 5;
+        cutsceneTrigger.SetActive(true);
+        Debug.Log("Test");
     }
 
 }
