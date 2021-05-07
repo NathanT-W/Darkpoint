@@ -37,8 +37,7 @@ public class CutsceneScript : MonoBehaviour
                     Van.SetActive(true);
                     Ava.SetActive(true);
 
-                    // VanTransformation = Van.transform.Find("PlayerVan2").gameObject;
-
+                    VanTransformation = Van.transform.Find("PlayerVan2").gameObject;
                     AvaTransformation = Ava.transform.Find("PlayerAva2").gameObject;
 
                     Van.transform.position = cutsceneVan.transform.position;
@@ -106,8 +105,8 @@ public class CutsceneScript : MonoBehaviour
         }
         else
         {
-            //Van.transform.find("PlayerVan2").gameObject.SetAcive(true);
-            //cutsceneVan.transform.find("PlayerVan2").gameObject.SetAcive(true);
+            VanTransformation.SetActive(true);
+            cutsceneVanTransformation.SetActive(true);
         }
 
     }

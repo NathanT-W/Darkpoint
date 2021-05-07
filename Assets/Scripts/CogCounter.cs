@@ -11,6 +11,8 @@ public class CogCounter : MonoBehaviour
 
     public Text cogText;
 
+    public GameObject cutsceneTrigger;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.L))
@@ -18,11 +20,18 @@ public class CogCounter : MonoBehaviour
             Debug.Log(cogsCollected);
         }
 
+        if (cogsCollected >= 5) {
+
+            cutsceneTrigger.SetActive(true);
+            
+        }
+
         cogText.text = cogsCollected.ToString();
     }
 
     public void Increment()
     {
-        cogsCollected += 1;
+        cogsCollected++;
     }
+
 }

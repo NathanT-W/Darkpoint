@@ -983,7 +983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1669535571153320003, guid: 6ac98c18d1efc4b4c92e8a80ac914644, type: 3}
       propertyPath: m_TagString
-      value: TransformFairy
+      value: Fairy
       objectReference: {fileID: 0}
     - target: {fileID: 3177389512667413604, guid: 6ac98c18d1efc4b4c92e8a80ac914644, type: 3}
       propertyPath: m_SortingOrder
