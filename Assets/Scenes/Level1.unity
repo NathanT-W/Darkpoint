@@ -354,8 +354,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Artists and Programmers weren't* harmed during the production of this
-    \"video game\". \nUses Unity Technology. Copyright @ 2005 - 2021 By Unity Technologies.\n\nAnd
-    thank you the player"
+    \"video game\". \nUses Unity Technology. Copyright @ 2005 - 2021 By Unity Technologies
+    and Fungus.\n\nAnd thank you, the player\n\nTo be continued...?"
 --- !u!222 &44428956
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2584,7 +2584,7 @@ PrefabInstance:
     - target: {fileID: 2037302633866878573, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 89ca0724b1350324186b8147c967c4af, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2138394702368862448, guid: bcf5958ab74453645acea9ce63d3ebc8, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.00024032593
