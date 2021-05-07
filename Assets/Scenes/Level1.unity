@@ -238,7 +238,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 4.4}
+  m_AnchoredPosition: {x: 0, y: -1.8}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &31481981
@@ -274,7 +274,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: restart
+  m_Text: back to menu
 --- !u!222 &31481982
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1679,7 +1679,6 @@ GameObject:
   - component: {fileID: 227467887}
   - component: {fileID: 227467886}
   - component: {fileID: 227467885}
-  - component: {fileID: 227467884}
   - component: {fileID: 227467883}
   - component: {fileID: 227467880}
   - component: {fileID: 227467876}
@@ -1688,6 +1687,7 @@ GameObject:
   - component: {fileID: 227467879}
   - component: {fileID: 227467882}
   - component: {fileID: 227467881}
+  - component: {fileID: 227467884}
   m_Layer: 0
   m_Name: Level3EndCutscene
   m_TagString: Untagged
@@ -1738,7 +1738,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &227467877
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1765,7 +1765,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &227467878
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1793,7 +1793,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &227467879
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1847,7 +1847,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &227467881
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1874,7 +1874,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &227467882
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1935,14 +1935,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 227467874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 3
+  itemId: 47
   indentLevel: 0
+  description: 
   targetObject: {fileID: 1997982043}
-  methodName: cutsceneEnd
-  delay: 0
+  targetComponentAssemblyName: CutsceneScript, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CutsceneScript
+  targetMethod: playCutscene
+  targetMethodText: 'playCutscene (PlayableDirector): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: UnityEngine.Playables.PlayableDirector, UnityEngine.DirectorModule,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      typeFullname: UnityEngine.Playables.PlayableDirector
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 232854745}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!114 &227467885
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2019,7 +2047,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 227467886}
   selectedCommands:
-  - {fileID: 227467881}
+  - {fileID: 227467884}
   variables: []
   description: 
   stepPause: 0
@@ -2031,6 +2059,58 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!1 &232854743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 232854744}
+  - component: {fileID: 232854745}
+  m_Layer: 0
+  m_Name: CreditsActivator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &232854744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232854743}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1584139863}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &232854745
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232854743}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: f8d283e90d7ae1e4b946af7e8b35cc13, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -2859571736773170056, guid: f8d283e90d7ae1e4b946af7e8b35cc13, type: 2}
+    value: {fileID: 1699405282}
+  - key: {fileID: 8580050770320354476, guid: f8d283e90d7ae1e4b946af7e8b35cc13, type: 2}
+    value: {fileID: 791518266}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &236191655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,9 +2263,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'back to
-
-    menu'
+  m_Text: exit
 --- !u!222 &245310565
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11942,6 +12020,7 @@ Transform:
   - {fileID: 2017912215}
   - {fileID: 178648743}
   - {fileID: 899490620}
+  - {fileID: 232854744}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13385,7 +13464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1699405283
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15315,8 +15394,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46, y: 20}
-  m_SizeDelta: {x: 245, y: 80}
+  m_AnchoredPosition: {x: -46, y: 20.7}
+  m_SizeDelta: {x: 245, y: 101.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1976798283
 MonoBehaviour:
