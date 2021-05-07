@@ -21,8 +21,8 @@ public class CollisionHandler : MonoBehaviour
 
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "Fairy")
         {
-            counterRef.Increment();
             Destroy(this.gameObject);
+            counterRef.Increment();
         }
     }
 }

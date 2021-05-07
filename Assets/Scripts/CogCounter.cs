@@ -23,12 +23,6 @@ public class CogCounter : MonoBehaviour
 
     public void Increment()
     {
-        gameObject.GetPhotonView().RPC("IncrementSync", RpcTarget.All);
-    }
-
-    [PunRPC]
-    public void IncrementSync()
-    {
-        cogsCollected++;
+        cogsCollected += 1;
     }
 }
