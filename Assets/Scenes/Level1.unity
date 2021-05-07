@@ -1688,6 +1688,7 @@ GameObject:
   - component: {fileID: 227467882}
   - component: {fileID: 227467881}
   - component: {fileID: 227467884}
+  - component: {fileID: 227467888}
   m_Layer: 0
   m_Name: Level3EndCutscene
   m_TagString: Untagged
@@ -2019,6 +2020,7 @@ MonoBehaviour:
   - {fileID: 227467882}
   - {fileID: 227467881}
   - {fileID: 227467884}
+  - {fileID: 227467888}
   suppressAllAutoSelections: 0
 --- !u!114 &227467887
 MonoBehaviour:
@@ -2047,7 +2049,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 227467886}
   selectedCommands:
-  - {fileID: 227467884}
+  - {fileID: 227467888}
   variables: []
   description: 
   stepPause: 0
@@ -2059,6 +2061,34 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &227467888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227467874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 48
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1997982043}
+  targetComponentAssemblyName: CutsceneScript, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CutsceneScript
+  targetMethod: gameEnd
+  targetMethodText: 'gameEnd (): IEnumerator'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Collections.IEnumerator
+  showInherited: 0
+  callMode: 1
 --- !u!1 &232854743
 GameObject:
   m_ObjectHideFlags: 0
@@ -16516,6 +16546,10 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 60d2b47672779454bb6000463fcff188, type: 3}
     - target: {fileID: 4913834474512431124, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
       propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913834474512431124, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}
+      propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4913834474512431210, guid: 99f7292b7d2a37d4186a6357d2ac6c43, type: 3}

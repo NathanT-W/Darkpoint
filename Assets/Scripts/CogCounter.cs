@@ -40,7 +40,7 @@ public class CogCounter : MonoBehaviour
 
         cogsCollected = 5;
         cutsceneTrigger.SetActive(true);
-        Debug.Log("Test");
+
     }
 
 }

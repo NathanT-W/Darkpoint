@@ -111,4 +111,12 @@ public class CutsceneScript : MonoBehaviour
 
     }
 
+    public IEnumerator gameEnd() {
+
+
+        yield return new WaitForSeconds(25);
+
+        Application.Quit();
+
+    }
 }
